@@ -1,0 +1,5 @@
+On July 17, 1996, about 2031 eastern daylight time, Trans World Airlines, Inc. (TWA) flight 800, a Boeing 747-131, N93119, crashed in the Atlantic Ocean near East Moriches, New York. TWA flight 800 was operating under the provisions of 14 Code of Federal Regulations Part 121 as a scheduled international passenger flight from John F. Kennedy International Airport (JFK), New York, New York, to Charles DeGaulle International Airport, Paris, France. The flight departed JFK about 2019, with 2 pilots, 2 flight engineers, 14 flight attendants, and 212 passengers on board. All 230 people on board were killed, and the airplane was destroyed. Visual meteorological conditions prevailed for the flight, which operated on an instrument flight rules flight plan.
+
+The safety issues in this report focus on fuel tank flammability, fuel tank ignition sources, design and certification standards, and the maintenance and aging of aircraft systems. Safety recommendations concerning these issues are addressed to the Federal Aviation Administration.
+
+Link to the Docket: http://twa800.sites.usa.gov/docket/

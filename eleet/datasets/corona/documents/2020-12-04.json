@@ -1,0 +1,1027 @@
+{
+  "text": "Summary (as of 04/12/2020, 12:00 AM)\r\n\u2022 Currently, the number of transmissions in the population in Germany is high. Therefore, the entire population is strongly\r\nencouraged to commit itself to infection prevention and control.\r\n\u2022 The 7-day incidence in Bavaria, Berlin, Hesse, North Rhine-Westphalia, Saxony and Thuringia is higher than the national\r\ntotal 7-day incidence of 135 cases per 100,000 population.\r\n\u2022 Since the beginning of September, the proportion of cases in older age groups has been increasing again. The 7-day\r\nincidence of people \u2265 60 years is currently 120 cases/100,000 population.\r\n\u2022 Almost all districts have a high 7-day COVID-19 incidence. Only 14 districts have an incidence of \u2264 25 cases/100,000\r\npopulation. In comparison, 274 districts have an incidence of >100 cases/100,000 population and of these, 26 districts have\r\nan incidence of >250-500 cases/100,000 population and two districts of >500-1000 cases/100,000 population.\r\n\u2022 The high nationwide number of cases is caused by increasingly diffuse transmission, with numerous clusters especially in\r\nhouseholds and nursing and long-term care homes, but also in occupational settings, community facilities and related to\r\nreligious events. For a large proportion of cases the transmission setting remains unclear.\r\n\u2022 After the strong increase in the number of COVID-19 cases treated in intensive care until mid-November (3,395 cases on\r\n15/11/2020), the increase has slowed somewhat, with 4,011 cases on 04/12/2020.\r\n\u2022 On 04/12/2020, 23,449 new laboratory-confirmed COVID-19 cases and 432 new deaths associated with COVID-19 have\r\nbeen transmitted to the RKI in Germany. ",
+  "report_number": "2020-12-04",
+  "mentions": {
+    "date": [
+      {
+        "mention": "04/12/2020",
+        "start": 15,
+        "length": 10
+      }
+    ],
+    "new_cases": [
+      {
+        "mention": "23,449",
+        "start": 1500,
+        "length": 6
+      }
+    ],
+    "new_deaths": [
+      {
+        "mention": "432",
+        "start": 1551,
+        "length": 3
+      }
+    ],
+    "incidence": [
+      {
+        "mention": "135",
+        "start": 373,
+        "length": 3
+      }
+    ],
+    "high_incidence_districts": [],
+    "patients_intensive_care": [
+      {
+        "mention": "4,011",
+        "start": 1456,
+        "length": 5
+      }
+    ],
+    "vaccinated": [],
+    "twice_vaccinated": []
+  },
+  "mentions_diff_value": {
+    "date": [],
+    "new_cases": [],
+    "new_deaths": [],
+    "incidence": [],
+    "high_incidence_districts": [],
+    "patients_intensive_care": [],
+    "vaccinated": [],
+    "twice_vaccinated": []
+  },
+  "mention_kinds": {
+    "date": "mentioned",
+    "new_cases": "mentioned",
+    "new_deaths": "mentioned",
+    "incidence": "mentioned",
+    "high_incidence_districts": "not-mentioned",
+    "patients_intensive_care": "mentioned",
+    "vaccinated": "not-mentioned",
+    "twice_vaccinated": "not-mentioned"
+  },
+  "evaluation": {
+    "Stanza": {
+      "mentions": {
+        "date": [
+          0,
+          37,
+          38
+        ],
+        "new_cases": [
+          39
+        ],
+        "new_deaths": [
+          41
+        ],
+        "incidence": [
+          11
+        ],
+        "high_incidence_districts": [],
+        "patients_intensive_care": [
+          36
+        ],
+        "vaccinated": [],
+        "twice_vaccinated": []
+      },
+      "mentions_diff_value": {
+        "date": [],
+        "new_cases": [],
+        "new_deaths": [],
+        "incidence": [],
+        "high_incidence_districts": [],
+        "patients_intensive_care": [],
+        "vaccinated": [],
+        "twice_vaccinated": []
+      },
+      "all_extractions": [
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "TIME",
+          "value": null,
+          "mention": "04/12/2020",
+          "position": 4,
+          "context": "Summary (as of 04/12/2020, 12:00 AM)\r\n\u2022 Currently, the number of transmissions in the population in Germany is high.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "TIME",
+          "value": null,
+          "mention": "12:00 AM",
+          "position": 6,
+          "context": "Summary (as of 04/12/2020, 12:00 AM)\r\n\u2022 Currently, the number of transmissions in the population in Germany is high.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Germany",
+          "position": 20,
+          "context": "Summary (as of 04/12/2020, 12:00 AM)\r\n\u2022 Currently, the number of transmissions in the population in Germany is high.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "7-day",
+          "position": 43,
+          "context": "The 7-day incidence in Bavaria, Berlin, Hesse, North Rhine-Westphalia, Saxony and Thuringia is higher than the national\r\ntotal 7-day incidence of 135 cases per 100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Bavaria",
+          "position": 48,
+          "context": "The 7-day incidence in Bavaria, Berlin, Hesse, North Rhine-Westphalia, Saxony and Thuringia is higher than the national\r\ntotal 7-day incidence of 135 cases per 100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Berlin",
+          "position": 50,
+          "context": "The 7-day incidence in Bavaria, Berlin, Hesse, North Rhine-Westphalia, Saxony and Thuringia is higher than the national\r\ntotal 7-day incidence of 135 cases per 100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Hesse",
+          "position": 52,
+          "context": "The 7-day incidence in Bavaria, Berlin, Hesse, North Rhine-Westphalia, Saxony and Thuringia is higher than the national\r\ntotal 7-day incidence of 135 cases per 100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "North Rhine-Westphalia",
+          "position": 54,
+          "context": "The 7-day incidence in Bavaria, Berlin, Hesse, North Rhine-Westphalia, Saxony and Thuringia is higher than the national\r\ntotal 7-day incidence of 135 cases per 100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Saxony",
+          "position": 59,
+          "context": "The 7-day incidence in Bavaria, Berlin, Hesse, North Rhine-Westphalia, Saxony and Thuringia is higher than the national\r\ntotal 7-day incidence of 135 cases per 100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Thuringia",
+          "position": 61,
+          "context": "The 7-day incidence in Bavaria, Berlin, Hesse, North Rhine-Westphalia, Saxony and Thuringia is higher than the national\r\ntotal 7-day incidence of 135 cases per 100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "7-day",
+          "position": 68,
+          "context": "The 7-day incidence in Bavaria, Berlin, Hesse, North Rhine-Westphalia, Saxony and Thuringia is higher than the national\r\ntotal 7-day incidence of 135 cases per 100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "135",
+          "position": 73,
+          "context": "The 7-day incidence in Bavaria, Berlin, Hesse, North Rhine-Westphalia, Saxony and Thuringia is higher than the national\r\ntotal 7-day incidence of 135 cases per 100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100,000",
+          "position": 76,
+          "context": "The 7-day incidence in Bavaria, Berlin, Hesse, North Rhine-Westphalia, Saxony and Thuringia is higher than the national\r\ntotal 7-day incidence of 135 cases per 100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "the beginning of September",
+          "position": 81,
+          "context": "Since the beginning of September, the proportion of cases in older age groups has been increasing again.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "7-day",
+          "position": 100,
+          "context": "The 7-day\r\nincidence of people \u2265 60 years is currently 120 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "60 years",
+          "position": 107,
+          "context": "The 7-day\r\nincidence of people \u2265 60 years is currently 120 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "120",
+          "position": 111,
+          "context": "The 7-day\r\nincidence of people \u2265 60 years is currently 120 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100,000",
+          "position": 114,
+          "context": "The 7-day\r\nincidence of people \u2265 60 years is currently 120 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "7-day",
+          "position": 124,
+          "context": "Almost all districts have a high 7-day COVID-19 incidence.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "19",
+          "position": 129,
+          "context": "Almost all districts have a high 7-day COVID-19 incidence.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "Only 14",
+          "position": 132,
+          "context": "Only 14 districts have an incidence of \u2264 25 cases/100,000\r\npopulation.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "25",
+          "position": 140,
+          "context": "Only 14 districts have an incidence of \u2264 25 cases/100,000\r\npopulation.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100,000",
+          "position": 143,
+          "context": "Only 14 districts have an incidence of \u2264 25 cases/100,000\r\npopulation.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "274",
+          "position": 149,
+          "context": "In comparison, 274 districts have an incidence of >100 cases/100,000 population and of these, 26 districts have\r\nan incidence of >250-500 cases/100,000 population and two districts of >500-1000 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100",
+          "position": 156,
+          "context": "In comparison, 274 districts have an incidence of >100 cases/100,000 population and of these, 26 districts have\r\nan incidence of >250-500 cases/100,000 population and two districts of >500-1000 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100,000",
+          "position": 159,
+          "context": "In comparison, 274 districts have an incidence of >100 cases/100,000 population and of these, 26 districts have\r\nan incidence of >250-500 cases/100,000 population and two districts of >500-1000 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "26",
+          "position": 165,
+          "context": "In comparison, 274 districts have an incidence of >100 cases/100,000 population and of these, 26 districts have\r\nan incidence of >250-500 cases/100,000 population and two districts of >500-1000 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": ">250-500",
+          "position": 171,
+          "context": "In comparison, 274 districts have an incidence of >100 cases/100,000 population and of these, 26 districts have\r\nan incidence of >250-500 cases/100,000 population and two districts of >500-1000 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100,000",
+          "position": 174,
+          "context": "In comparison, 274 districts have an incidence of >100 cases/100,000 population and of these, 26 districts have\r\nan incidence of >250-500 cases/100,000 population and two districts of >500-1000 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "two",
+          "position": 177,
+          "context": "In comparison, 274 districts have an incidence of >100 cases/100,000 population and of these, 26 districts have\r\nan incidence of >250-500 cases/100,000 population and two districts of >500-1000 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": ">500-1000",
+          "position": 180,
+          "context": "In comparison, 274 districts have an incidence of >100 cases/100,000 population and of these, 26 districts have\r\nan incidence of >250-500 cases/100,000 population and two districts of >500-1000 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100,000",
+          "position": 183,
+          "context": "In comparison, 274 districts have an incidence of >100 cases/100,000 population and of these, 26 districts have\r\nan incidence of >250-500 cases/100,000 population and two districts of >500-1000 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "19",
+          "position": 252,
+          "context": "After the strong increase in the number of COVID-19 cases treated in intensive care until mid-November (3,395 cases on\r\n15/11/2020), the increase has slowed somewhat, with 4,011 cases on 04/12/2020.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "mid-November",
+          "position": 259,
+          "context": "After the strong increase in the number of COVID-19 cases treated in intensive care until mid-November (3,395 cases on\r\n15/11/2020), the increase has slowed somewhat, with 4,011 cases on 04/12/2020.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "3,395",
+          "position": 261,
+          "context": "After the strong increase in the number of COVID-19 cases treated in intensive care until mid-November (3,395 cases on\r\n15/11/2020), the increase has slowed somewhat, with 4,011 cases on 04/12/2020.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "15/11/2020",
+          "position": 264,
+          "context": "After the strong increase in the number of COVID-19 cases treated in intensive care until mid-November (3,395 cases on\r\n15/11/2020), the increase has slowed somewhat, with 4,011 cases on 04/12/2020.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "4,011",
+          "position": 274,
+          "context": "After the strong increase in the number of COVID-19 cases treated in intensive care until mid-November (3,395 cases on\r\n15/11/2020), the increase has slowed somewhat, with 4,011 cases on 04/12/2020.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "04/12/2020",
+          "position": 277,
+          "context": "After the strong increase in the number of COVID-19 cases treated in intensive care until mid-November (3,395 cases on\r\n15/11/2020), the increase has slowed somewhat, with 4,011 cases on 04/12/2020.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "04/12/2020",
+          "position": 281,
+          "context": "On 04/12/2020, 23,449 new laboratory-confirmed COVID-19 cases and 432 new deaths associated with COVID-19 have\r\nbeen transmitted to the RKI in Germany.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "23,449",
+          "position": 283,
+          "context": "On 04/12/2020, 23,449 new laboratory-confirmed COVID-19 cases and 432 new deaths associated with COVID-19 have\r\nbeen transmitted to the RKI in Germany.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "19",
+          "position": 290,
+          "context": "On 04/12/2020, 23,449 new laboratory-confirmed COVID-19 cases and 432 new deaths associated with COVID-19 have\r\nbeen transmitted to the RKI in Germany.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "432",
+          "position": 293,
+          "context": "On 04/12/2020, 23,449 new laboratory-confirmed COVID-19 cases and 432 new deaths associated with COVID-19 have\r\nbeen transmitted to the RKI in Germany.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "PRODUCT",
+          "value": null,
+          "mention": "COVID-19",
+          "position": 298,
+          "context": "On 04/12/2020, 23,449 new laboratory-confirmed COVID-19 cases and 432 new deaths associated with COVID-19 have\r\nbeen transmitted to the RKI in Germany.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "RKI",
+          "position": 306,
+          "context": "On 04/12/2020, 23,449 new laboratory-confirmed COVID-19 cases and 432 new deaths associated with COVID-19 have\r\nbeen transmitted to the RKI in Germany.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Germany",
+          "position": 308,
+          "context": "On 04/12/2020, 23,449 new laboratory-confirmed COVID-19 cases and 432 new deaths associated with COVID-19 have\r\nbeen transmitted to the RKI in Germany.",
+          "embedding": null
+        }
+      ]
+    },
+    "Stanford-CoreNLP": {
+      "mentions": {
+        "date": [
+          37,
+          38
+        ],
+        "new_cases": [
+          39
+        ],
+        "new_deaths": [
+          41
+        ],
+        "incidence": [
+          12
+        ],
+        "high_incidence_districts": [],
+        "patients_intensive_care": [
+          36
+        ],
+        "vaccinated": [],
+        "twice_vaccinated": []
+      },
+      "mentions_diff_value": {
+        "date": [],
+        "new_cases": [],
+        "new_deaths": [],
+        "incidence": [],
+        "high_incidence_districts": [],
+        "patients_intensive_care": [],
+        "vaccinated": [],
+        "twice_vaccinated": []
+      },
+      "all_extractions": [
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "TIME",
+          "value": null,
+          "mention": "04/12/2020, 12:00 AM",
+          "position": 4,
+          "context": "Summary ( as of 04/12/2020 , 12:00 AM ) \u2022 Currently , the number of transmissions in the population in Germany is high .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "Currently",
+          "position": 10,
+          "context": "Summary ( as of 04/12/2020 , 12:00 AM ) \u2022 Currently , the number of transmissions in the population in Germany is high .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "COUNTRY",
+          "value": null,
+          "mention": "Germany",
+          "position": 20,
+          "context": "Summary ( as of 04/12/2020 , 12:00 AM ) \u2022 Currently , the number of transmissions in the population in Germany is high .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CAUSE_OF_DEATH",
+          "value": null,
+          "mention": "infection",
+          "position": 60,
+          "context": "Therefore , the entire population is strongly encouraged to commit itself to infection prevention and control .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DURATION",
+          "value": null,
+          "mention": "7-day",
+          "position": 84,
+          "context": "\u2022 The 7 - day incidence in Bavaria , Berlin , Hesse , North Rhine - Westphalia , Saxony and Thuringia is higher than the national total 7 - day incidence of 135 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Bavaria",
+          "position": 89,
+          "context": "\u2022 The 7 - day incidence in Bavaria , Berlin , Hesse , North Rhine - Westphalia , Saxony and Thuringia is higher than the national total 7 - day incidence of 135 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CITY",
+          "value": null,
+          "mention": "Berlin",
+          "position": 91,
+          "context": "\u2022 The 7 - day incidence in Bavaria , Berlin , Hesse , North Rhine - Westphalia , Saxony and Thuringia is higher than the national total 7 - day incidence of 135 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Hesse",
+          "position": 93,
+          "context": "\u2022 The 7 - day incidence in Bavaria , Berlin , Hesse , North Rhine - Westphalia , Saxony and Thuringia is higher than the national total 7 - day incidence of 135 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "North Rhine-Westphalia",
+          "position": 95,
+          "context": "\u2022 The 7 - day incidence in Bavaria , Berlin , Hesse , North Rhine - Westphalia , Saxony and Thuringia is higher than the national total 7 - day incidence of 135 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Saxony",
+          "position": 100,
+          "context": "\u2022 The 7 - day incidence in Bavaria , Berlin , Hesse , North Rhine - Westphalia , Saxony and Thuringia is higher than the national total 7 - day incidence of 135 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Thuringia",
+          "position": 102,
+          "context": "\u2022 The 7 - day incidence in Bavaria , Berlin , Hesse , North Rhine - Westphalia , Saxony and Thuringia is higher than the national total 7 - day incidence of 135 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DURATION",
+          "value": null,
+          "mention": "7-day",
+          "position": 109,
+          "context": "\u2022 The 7 - day incidence in Bavaria , Berlin , Hesse , North Rhine - Westphalia , Saxony and Thuringia is higher than the national total 7 - day incidence of 135 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "135",
+          "position": 114,
+          "context": "\u2022 The 7 - day incidence in Bavaria , Berlin , Hesse , North Rhine - Westphalia , Saxony and Thuringia is higher than the national total 7 - day incidence of 135 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100,000",
+          "position": 117,
+          "context": "\u2022 The 7 - day incidence in Bavaria , Berlin , Hesse , North Rhine - Westphalia , Saxony and Thuringia is higher than the national total 7 - day incidence of 135 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "the beginning of September",
+          "position": 160,
+          "context": "\u2022 Since the beginning of September , the proportion of cases in older age groups has been increasing again .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DURATION",
+          "value": null,
+          "mention": "7-day",
+          "position": 199,
+          "context": "The 7 - day incidence of people \u2265 60 years is currently 120 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DURATION",
+          "value": null,
+          "mention": "60 years",
+          "position": 206,
+          "context": "The 7 - day incidence of people \u2265 60 years is currently 120 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "currently",
+          "position": 209,
+          "context": "The 7 - day incidence of people \u2265 60 years is currently 120 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "120",
+          "position": 210,
+          "context": "The 7 - day incidence of people \u2265 60 years is currently 120 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100,000",
+          "position": 213,
+          "context": "The 7 - day incidence of people \u2265 60 years is currently 120 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DURATION",
+          "value": null,
+          "mention": "7-day",
+          "position": 241,
+          "context": "\u2022 Almost all districts have a high 7 - day COVID - 19 incidence .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "14",
+          "position": 265,
+          "context": "Only 14 districts have an incidence of \u2264 25 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "25",
+          "position": 272,
+          "context": "Only 14 districts have an incidence of \u2264 25 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100,000",
+          "position": 275,
+          "context": "Only 14 districts have an incidence of \u2264 25 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "274",
+          "position": 295,
+          "context": "In comparison , 274 districts have an incidence of > 100 cases / 100,000 population and of these , 26 districts have an incidence of > 250 - 500 cases / 100,000 population and two districts of > 500-1000 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100",
+          "position": 302,
+          "context": "In comparison , 274 districts have an incidence of > 100 cases / 100,000 population and of these , 26 districts have an incidence of > 250 - 500 cases / 100,000 population and two districts of > 500-1000 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100,000",
+          "position": 305,
+          "context": "In comparison , 274 districts have an incidence of > 100 cases / 100,000 population and of these , 26 districts have an incidence of > 250 - 500 cases / 100,000 population and two districts of > 500-1000 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "26",
+          "position": 311,
+          "context": "In comparison , 274 districts have an incidence of > 100 cases / 100,000 population and of these , 26 districts have an incidence of > 250 - 500 cases / 100,000 population and two districts of > 500-1000 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "250-500",
+          "position": 318,
+          "context": "In comparison , 274 districts have an incidence of > 100 cases / 100,000 population and of these , 26 districts have an incidence of > 250 - 500 cases / 100,000 population and two districts of > 500-1000 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100,000",
+          "position": 323,
+          "context": "In comparison , 274 districts have an incidence of > 100 cases / 100,000 population and of these , 26 districts have an incidence of > 250 - 500 cases / 100,000 population and two districts of > 500-1000 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "two",
+          "position": 326,
+          "context": "In comparison , 274 districts have an incidence of > 100 cases / 100,000 population and of these , 26 districts have an incidence of > 250 - 500 cases / 100,000 population and two districts of > 500-1000 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "500-1000",
+          "position": 330,
+          "context": "In comparison , 274 districts have an incidence of > 100 cases / 100,000 population and of these , 26 districts have an incidence of > 250 - 500 cases / 100,000 population and two districts of > 500-1000 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100,000",
+          "position": 333,
+          "context": "In comparison , 274 districts have an incidence of > 100 cases / 100,000 population and of these , 26 districts have an incidence of > 250 - 500 cases / 100,000 population and two districts of > 500-1000 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "MISC",
+          "value": null,
+          "mention": "COVID-19",
+          "position": 499,
+          "context": "\u2022 After the strong increase in the number of COVID - 19 cases treated in intensive care until mid-November ( 3,395 cases on 15/11/2020 ) , the increase has slowed somewhat , with 4,011 cases on 04/12/2020 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "3,395",
+          "position": 510,
+          "context": "\u2022 After the strong increase in the number of COVID - 19 cases treated in intensive care until mid-November ( 3,395 cases on 15/11/2020 ) , the increase has slowed somewhat , with 4,011 cases on 04/12/2020 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "15/11/2020",
+          "position": 513,
+          "context": "\u2022 After the strong increase in the number of COVID - 19 cases treated in intensive care until mid-November ( 3,395 cases on 15/11/2020 ) , the increase has slowed somewhat , with 4,011 cases on 04/12/2020 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "4,011",
+          "position": 523,
+          "context": "\u2022 After the strong increase in the number of COVID - 19 cases treated in intensive care until mid-November ( 3,395 cases on 15/11/2020 ) , the increase has slowed somewhat , with 4,011 cases on 04/12/2020 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "04/12/2020",
+          "position": 526,
+          "context": "\u2022 After the strong increase in the number of COVID - 19 cases treated in intensive care until mid-November ( 3,395 cases on 15/11/2020 ) , the increase has slowed somewhat , with 4,011 cases on 04/12/2020 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "04/12/2020",
+          "position": 568,
+          "context": "\u2022 On 04/12/2020 , 23,449 new laboratory - confirmed COVID - 19 cases and 432 new deaths associated with COVID - 19 have been transmitted to the RKI in Germany .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "23,449",
+          "position": 570,
+          "context": "\u2022 On 04/12/2020 , 23,449 new laboratory - confirmed COVID - 19 cases and 432 new deaths associated with COVID - 19 have been transmitted to the RKI in Germany .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "MISC",
+          "value": null,
+          "mention": "COVID-19",
+          "position": 575,
+          "context": "\u2022 On 04/12/2020 , 23,449 new laboratory - confirmed COVID - 19 cases and 432 new deaths associated with COVID - 19 have been transmitted to the RKI in Germany .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "432",
+          "position": 580,
+          "context": "\u2022 On 04/12/2020 , 23,449 new laboratory - confirmed COVID - 19 cases and 432 new deaths associated with COVID - 19 have been transmitted to the RKI in Germany .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "MISC",
+          "value": null,
+          "mention": "COVID-19",
+          "position": 585,
+          "context": "\u2022 On 04/12/2020 , 23,449 new laboratory - confirmed COVID - 19 cases and 432 new deaths associated with COVID - 19 have been transmitted to the RKI in Germany .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "COUNTRY",
+          "value": null,
+          "mention": "Germany",
+          "position": 595,
+          "context": "\u2022 On 04/12/2020 , 23,449 new laboratory - confirmed COVID - 19 cases and 432 new deaths associated with COVID - 19 have been transmitted to the RKI in Germany .",
+          "embedding": null
+        }
+      ]
+    }
+  }
+}

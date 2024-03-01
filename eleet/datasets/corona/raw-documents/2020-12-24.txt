@@ -1,0 +1,20 @@
+Summary (as of 24/12/2020, 12:00 AM)
+• Currently, the number of transmissions in the population in Germany is high. Therefore, the entire population is strongly encouraged to
+commit itself to infection prevention and control even more dedicatedly than before.
+• Yesterday, 32,195 new laboratory-confirmed COVID-19 cases as well as 802 new deaths associated with COVID-19 have been transmitted to
+the RKI in Germany .The national 7-day incidence is 196 cases per 100,000 population. In Saxony and Thuringia, it is considerably above the
+national incidence.
+• All of the 412 districts have a high 7-day COVID-19 incidence. 359 districts have an incidence of >100 cases/100,000 population and of these,
+87 districts have an incidence of >250-500 cases/100,000 population and 5 districts of >500 cases/100,000 population.
+• Since the beginning of September, the proportion of cases in older age groups has been increasing again. The 7-day incidence of people ≥60
+years is currently 201 cases/100,000 population and since yesterday above the national incidence.
+• The high nationwide number of cases is caused by increasingly diffuse transmission, with numerous clusters especially in households and
+nursing and long-term care homes.
+• On 24/12/2020 (12:15 PM) 5,354 COVID-19 patients were in intensive care. In the leading 24 hours, +762 existing patients had been
+discharged (25% of which had died) and +873 patients were newly admitted. The resulting number of ongoing cases was +111 more than the
+prior day.
+• RKI now judges the level of threat to the health of the general population as very high.
+• On 12/19/2020, a new virus variant was reported in the UK. The ECDC has published a Rapid Risk Assessment on 20/12/2020. To date, it is
+unknown how the new virus variant will affect the COVID-19 pandemic. So far, the new virus variant has not yet been notified to RKI.
+• RKI will not publish any daily situation report on December 25 and January 1, 2021. Testing and notification activities may be lower during the
+festive season, possibly resulting in an incomplete picture of the epidemiological situation in Germany. 

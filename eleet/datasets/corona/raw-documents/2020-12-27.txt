@@ -1,0 +1,20 @@
+Summary (as of 27/12/2020, 12:00 AM)
+• Currently, the number of transmissions in the population in Germany is high. RKI now judges the level of threat to the health of the general
+population as very high.
+• Yesterday, 13,755 new laboratory-confirmed COVID-19 cases as well as 356 new deaths associated with COVID-19 were transmitted to the RKI
+in Germany. The national 7-day incidence is 161 cases per 100,000 population. In Saxony and Thuringia, it is markedly above the national
+incidence.
+• Almost all of the 412 districts have a high 7-day COVID-19 incidence. 327 districts have an incidence of >100 cases/100,000 population and of
+these, 53 districts have an incidence of >250-500 cases/100,000 population and 2 districts of >500 cases/100,000 population.
+• The 7-day incidence of people ≥60 years is currently 171 cases/100,000 population and above the national incidence since 23/12/2020.
+• The high nationwide number of cases is caused by increasingly diffuse transmission, with numerous clusters especially in households and
+nursing and long-term care homes.
+• On 27/12/2020 (12:15 PM) 5,562 COVID-19 patients were in intensive care. In the leading 24 hours, +575 existing patients had been
+discharged (39% of which had died) and +602 patients were newly admitted. The resulting number of ongoing cases was +27 more than the
+prior day.
+• On 12/19/2020, a new virus variant was reported in the UK. The ECDC has published a Rapid Risk Assessment on 20/12/2020. To date, it is
+unknown how the new virus variant will affect the COVID-19 pandemic. So far, one case with the new variant virus has been reported in
+Germany (Baden-Württemberg). Further cases may be expected.
+• Today, 27th of December 2020, vaccinations against SARS-CoV-2 have started in all federal states.
+• On January 1, 2021 no situation report will be released. Testing and notification activities may be lower during the festive season, resulting in a
+putatively incomplete picture of the epidemiological situation in Germany. 

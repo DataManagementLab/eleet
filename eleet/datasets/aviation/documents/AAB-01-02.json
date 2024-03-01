@@ -1,0 +1,711 @@
+{
+  "text": "On September 25, 1999, about 1726 Hawaiian standard time, Big Island Air flight 58, a Piper PA-31-350 (Chieftain), N411WL, crashed on the northeast slope of the Mauna Loa volcano near Volcano, Hawaii. The pilot and all nine passengers on board were killed, and the airplane was destroyed by impact forces and a postimpact fire. The sightseeing tour flight was operating under 14 Code of Federal Regulations (CFR) Part 135 as an on-demand air taxi operation. A visual flight rules (VFR) flight plan was filed, and visual meteorological conditions (VMC) existed at the Keahole-Kona International Airport (KOA), Kona, Hawaii, from which the airplane departed about 1622. The investigation determined that instrument meteorological conditions (IMC) prevailed in the vicinity of the accident site.",
+  "report_number": "AAB-01-02",
+  "mentions": {
+    "event_date": [
+      {
+        "mention": "September 25, 1999",
+        "start": 3,
+        "length": 18
+      }
+    ],
+    "location_city": [
+      {
+        "mention": "Volcano",
+        "start": 184,
+        "length": 7
+      }
+    ],
+    "location_state": [
+      {
+        "mention": "Hawaii",
+        "start": 193,
+        "length": 6
+      },
+      {
+        "mention": "Hawaii",
+        "start": 615,
+        "length": 6
+      }
+    ],
+    "airport_code": [
+      {
+        "mention": "KOA",
+        "start": 603,
+        "length": 3
+      }
+    ],
+    "airport_name": [
+      {
+        "mention": "Keahole-Kona International Airport",
+        "start": 567,
+        "length": 34
+      }
+    ],
+    "aircraft_damage": [
+      {
+        "mention": "destroyed",
+        "start": 278,
+        "length": 9
+      }
+    ],
+    "aircraft_registration_number": [
+      {
+        "mention": "N411WL",
+        "start": 115,
+        "length": 6
+      }
+    ],
+    "aircraft_make": [
+      {
+        "mention": "Piper",
+        "start": 86,
+        "length": 5
+      }
+    ],
+    "aircraft_model": [
+      {
+        "mention": "PA-31-350",
+        "start": 92,
+        "length": 9
+      }
+    ],
+    "far_description": [
+      {
+        "mention": "14 Code of Federal Regulations (CFR) Part 135",
+        "start": 376,
+        "length": 45
+      },
+      {
+        "mention": "Part 135",
+        "start": 413,
+        "length": 8
+      },
+      {
+        "mention": "135",
+        "start": 418,
+        "length": 3
+      }
+    ],
+    "air_carrier": [
+      {
+        "mention": "Big Island Air",
+        "start": 58,
+        "length": 14
+      }
+    ],
+    "total_fatal_injuries": [
+      {
+        "mention": "The pilot and all nine passengers on board were killed",
+        "start": 201,
+        "length": 54
+      }
+    ],
+    "total_serious_injuries": [
+      {
+        "mention": "The pilot and all nine passengers on board were killed",
+        "start": 201,
+        "length": 54
+      }
+    ],
+    "total_minor_injuries": [
+      {
+        "mention": "The pilot and all nine passengers on board were killed",
+        "start": 201,
+        "length": 54
+      }
+    ],
+    "total_uninjured": [
+      {
+        "mention": "The pilot and all nine passengers on board were killed",
+        "start": 201,
+        "length": 54
+      }
+    ],
+    "weather_condition": [
+      {
+        "mention": "instrument meteorological conditions (IMC)",
+        "start": 702,
+        "length": 42
+      },
+      {
+        "mention": "instrument meteorological conditions",
+        "start": 702,
+        "length": 36
+      },
+      {
+        "mention": "IMC",
+        "start": 740,
+        "length": 3
+      }
+    ]
+  },
+  "mentions_diff_value": {
+    "event_date": [],
+    "location_city": [
+      {
+        "mention": "Kona",
+        "start": 609,
+        "length": 4
+      }
+    ],
+    "location_state": [],
+    "airport_code": [],
+    "airport_name": [],
+    "aircraft_damage": [],
+    "aircraft_registration_number": [],
+    "aircraft_make": [],
+    "aircraft_model": [],
+    "far_description": [],
+    "air_carrier": [],
+    "total_fatal_injuries": [],
+    "total_serious_injuries": [],
+    "total_minor_injuries": [],
+    "total_uninjured": [],
+    "weather_condition": [
+      {
+        "mention": "visual meteorological conditions (VMC)",
+        "start": 513,
+        "length": 38
+      },
+      {
+        "mention": "visual meteorological conditions",
+        "start": 513,
+        "length": 32
+      },
+      {
+        "mention": "VMC",
+        "start": 547,
+        "length": 3
+      }
+    ]
+  },
+  "mention_kinds": {
+    "event_date": "mentioned",
+    "location_city": "mentioned",
+    "location_state": "mentioned",
+    "airport_code": "mentioned",
+    "airport_name": "mentioned",
+    "aircraft_damage": "mentioned",
+    "aircraft_registration_number": "mentioned",
+    "aircraft_make": "mentioned",
+    "aircraft_model": "mentioned",
+    "far_description": "mentioned",
+    "air_carrier": "mentioned",
+    "total_fatal_injuries": "derivable",
+    "total_serious_injuries": "derivable",
+    "total_minor_injuries": "derivable",
+    "total_uninjured": "derivable",
+    "weather_condition": "mentioned"
+  },
+  "evaluation": {
+    "Stanza": {
+      "mentions": {
+        "event_date": [
+          0
+        ],
+        "location_city": [
+          8
+        ],
+        "location_state": [
+          9,
+          17
+        ],
+        "airport_code": [
+          15
+        ],
+        "airport_name": [
+          14
+        ],
+        "aircraft_damage": [],
+        "aircraft_registration_number": [
+          6
+        ],
+        "aircraft_make": [],
+        "aircraft_model": [],
+        "far_description": [
+          13
+        ],
+        "air_carrier": [
+          3
+        ],
+        "total_fatal_injuries": [],
+        "total_serious_injuries": [],
+        "total_minor_injuries": [],
+        "total_uninjured": [],
+        "weather_condition": []
+      },
+      "mentions_diff_value": {
+        "event_date": [],
+        "location_city": [
+          16
+        ],
+        "location_state": [],
+        "airport_code": [],
+        "airport_name": [],
+        "aircraft_damage": [],
+        "aircraft_registration_number": [],
+        "aircraft_make": [],
+        "aircraft_model": [],
+        "far_description": [],
+        "air_carrier": [],
+        "total_fatal_injuries": [],
+        "total_serious_injuries": [],
+        "total_minor_injuries": [],
+        "total_uninjured": [],
+        "weather_condition": []
+      },
+      "all_extractions": [
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "September 25, 1999",
+          "position": 1,
+          "context": "On September 25, 1999, about 1726 Hawaiian standard time, Big Island Air flight 58, a Piper PA-31-350 (Chieftain), N411WL, crashed on the northeast slope of the Mauna Loa volcano near Volcano, Hawaii.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "about 1726",
+          "position": 6,
+          "context": "On September 25, 1999, about 1726 Hawaiian standard time, Big Island Air flight 58, a Piper PA-31-350 (Chieftain), N411WL, crashed on the northeast slope of the Mauna Loa volcano near Volcano, Hawaii.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "NORP",
+          "value": null,
+          "mention": "Hawaiian",
+          "position": 8,
+          "context": "On September 25, 1999, about 1726 Hawaiian standard time, Big Island Air flight 58, a Piper PA-31-350 (Chieftain), N411WL, crashed on the northeast slope of the Mauna Loa volcano near Volcano, Hawaii.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "Big Island Air",
+          "position": 12,
+          "context": "On September 25, 1999, about 1726 Hawaiian standard time, Big Island Air flight 58, a Piper PA-31-350 (Chieftain), N411WL, crashed on the northeast slope of the Mauna Loa volcano near Volcano, Hawaii.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "58",
+          "position": 16,
+          "context": "On September 25, 1999, about 1726 Hawaiian standard time, Big Island Air flight 58, a Piper PA-31-350 (Chieftain), N411WL, crashed on the northeast slope of the Mauna Loa volcano near Volcano, Hawaii.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "31-350",
+          "position": 22,
+          "context": "On September 25, 1999, about 1726 Hawaiian standard time, Big Island Air flight 58, a Piper PA-31-350 (Chieftain), N411WL, crashed on the northeast slope of the Mauna Loa volcano near Volcano, Hawaii.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "PRODUCT",
+          "value": null,
+          "mention": "N411WL",
+          "position": 27,
+          "context": "On September 25, 1999, about 1726 Hawaiian standard time, Big Island Air flight 58, a Piper PA-31-350 (Chieftain), N411WL, crashed on the northeast slope of the Mauna Loa volcano near Volcano, Hawaii.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "LOC",
+          "value": null,
+          "mention": "Mauna Loa",
+          "position": 36,
+          "context": "On September 25, 1999, about 1726 Hawaiian standard time, Big Island Air flight 58, a Piper PA-31-350 (Chieftain), N411WL, crashed on the northeast slope of the Mauna Loa volcano near Volcano, Hawaii.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Volcano",
+          "position": 40,
+          "context": "On September 25, 1999, about 1726 Hawaiian standard time, Big Island Air flight 58, a Piper PA-31-350 (Chieftain), N411WL, crashed on the northeast slope of the Mauna Loa volcano near Volcano, Hawaii.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Hawaii",
+          "position": 42,
+          "context": "On September 25, 1999, about 1726 Hawaiian standard time, Big Island Air flight 58, a Piper PA-31-350 (Chieftain), N411WL, crashed on the northeast slope of the Mauna Loa volcano near Volcano, Hawaii.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "nine",
+          "position": 48,
+          "context": "The pilot and all nine passengers on board were killed, and the airplane was destroyed by impact forces and a postimpact fire.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "LAW",
+          "value": null,
+          "mention": "14 Code of Federal Regulations",
+          "position": 75,
+          "context": "The sightseeing tour flight was operating under 14 Code of Federal Regulations (CFR) Part 135 as an on-demand air taxi operation.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "CFR",
+          "position": 81,
+          "context": "The sightseeing tour flight was operating under 14 Code of Federal Regulations (CFR) Part 135 as an on-demand air taxi operation.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "135",
+          "position": 84,
+          "context": "The sightseeing tour flight was operating under 14 Code of Federal Regulations (CFR) Part 135 as an on-demand air taxi operation.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "FAC",
+          "value": null,
+          "mention": "the Keahole-Kona International Airport",
+          "position": 115,
+          "context": "A visual flight rules (VFR) flight plan was filed, and visual meteorological conditions (VMC) existed at the Keahole-Kona International Airport (KOA), Kona, Hawaii, from which the airplane departed about 1622.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "KOA",
+          "position": 122,
+          "context": "A visual flight rules (VFR) flight plan was filed, and visual meteorological conditions (VMC) existed at the Keahole-Kona International Airport (KOA), Kona, Hawaii, from which the airplane departed about 1622.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Kona",
+          "position": 125,
+          "context": "A visual flight rules (VFR) flight plan was filed, and visual meteorological conditions (VMC) existed at the Keahole-Kona International Airport (KOA), Kona, Hawaii, from which the airplane departed about 1622.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Hawaii",
+          "position": 127,
+          "context": "A visual flight rules (VFR) flight plan was filed, and visual meteorological conditions (VMC) existed at the Keahole-Kona International Airport (KOA), Kona, Hawaii, from which the airplane departed about 1622.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "about 1622",
+          "position": 134,
+          "context": "A visual flight rules (VFR) flight plan was filed, and visual meteorological conditions (VMC) existed at the Keahole-Kona International Airport (KOA), Kona, Hawaii, from which the airplane departed about 1622.",
+          "embedding": null
+        }
+      ]
+    },
+    "Stanford-CoreNLP": {
+      "mentions": {
+        "event_date": [
+          0
+        ],
+        "location_city": [
+          7
+        ],
+        "location_state": [
+          8,
+          17
+        ],
+        "airport_code": [],
+        "airport_name": [
+          15
+        ],
+        "aircraft_damage": [],
+        "aircraft_registration_number": [],
+        "aircraft_make": [
+          5
+        ],
+        "aircraft_model": [],
+        "far_description": [
+          13
+        ],
+        "air_carrier": [
+          3
+        ],
+        "total_fatal_injuries": [],
+        "total_serious_injuries": [],
+        "total_minor_injuries": [],
+        "total_uninjured": [],
+        "weather_condition": []
+      },
+      "mentions_diff_value": {
+        "event_date": [],
+        "location_city": [
+          16
+        ],
+        "location_state": [],
+        "airport_code": [],
+        "airport_name": [],
+        "aircraft_damage": [],
+        "aircraft_registration_number": [],
+        "aircraft_make": [],
+        "aircraft_model": [],
+        "far_description": [],
+        "air_carrier": [],
+        "total_fatal_injuries": [],
+        "total_serious_injuries": [],
+        "total_minor_injuries": [],
+        "total_uninjured": [],
+        "weather_condition": [
+          14
+        ]
+      },
+      "all_extractions": [
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "September 25, 1999",
+          "position": 1,
+          "context": "On September 25 , 1999 , about 1726 Hawaiian standard time , Big Island Air flight 58 , a Piper PA -31-350 ( Chieftain ) , N411WL , crashed on the northeast slope of the Mauna Loa volcano near Volcano , Hawaii .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "about 1726",
+          "position": 6,
+          "context": "On September 25 , 1999 , about 1726 Hawaiian standard time , Big Island Air flight 58 , a Piper PA -31-350 ( Chieftain ) , N411WL , crashed on the northeast slope of the Mauna Loa volcano near Volcano , Hawaii .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "MISC",
+          "value": null,
+          "mention": "Hawaiian",
+          "position": 8,
+          "context": "On September 25 , 1999 , about 1726 Hawaiian standard time , Big Island Air flight 58 , a Piper PA -31-350 ( Chieftain ) , N411WL , crashed on the northeast slope of the Mauna Loa volcano near Volcano , Hawaii .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "MISC",
+          "value": null,
+          "mention": "Big Island Air",
+          "position": 12,
+          "context": "On September 25 , 1999 , about 1726 Hawaiian standard time , Big Island Air flight 58 , a Piper PA -31-350 ( Chieftain ) , N411WL , crashed on the northeast slope of the Mauna Loa volcano near Volcano , Hawaii .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "58",
+          "position": 16,
+          "context": "On September 25 , 1999 , about 1726 Hawaiian standard time , Big Island Air flight 58 , a Piper PA -31-350 ( Chieftain ) , N411WL , crashed on the northeast slope of the Mauna Loa volcano near Volcano , Hawaii .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORGANIZATION",
+          "value": null,
+          "mention": "Piper",
+          "position": 19,
+          "context": "On September 25 , 1999 , about 1726 Hawaiian standard time , Big Island Air flight 58 , a Piper PA -31-350 ( Chieftain ) , N411WL , crashed on the northeast slope of the Mauna Loa volcano near Volcano , Hawaii .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "STATE_OR_PROVINCE",
+          "value": null,
+          "mention": "PA",
+          "position": 20,
+          "context": "On September 25 , 1999 , about 1726 Hawaiian standard time , Big Island Air flight 58 , a Piper PA -31-350 ( Chieftain ) , N411WL , crashed on the northeast slope of the Mauna Loa volcano near Volcano , Hawaii .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Volcano",
+          "position": 39,
+          "context": "On September 25 , 1999 , about 1726 Hawaiian standard time , Big Island Air flight 58 , a Piper PA -31-350 ( Chieftain ) , N411WL , crashed on the northeast slope of the Mauna Loa volcano near Volcano , Hawaii .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "STATE_OR_PROVINCE",
+          "value": null,
+          "mention": "Hawaii",
+          "position": 41,
+          "context": "On September 25 , 1999 , about 1726 Hawaiian standard time , Big Island Air flight 58 , a Piper PA -31-350 ( Chieftain ) , N411WL , crashed on the northeast slope of the Mauna Loa volcano near Volcano , Hawaii .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "TITLE",
+          "value": null,
+          "mention": "pilot",
+          "position": 87,
+          "context": "The pilot and all nine passengers on board were killed , and the airplane was destroyed by impact forces and a postimpact fire .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "nine",
+          "position": 90,
+          "context": "The pilot and all nine passengers on board were killed , and the airplane was destroyed by impact forces and a postimpact fire .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CAUSE_OF_DEATH",
+          "value": null,
+          "mention": "fire",
+          "position": 108,
+          "context": "The pilot and all nine passengers on board were killed , and the airplane was destroyed by impact forces and a postimpact fire .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "14",
+          "position": 141,
+          "context": "The sightseeing tour flight was operating under 14 Code of Federal Regulations ( CFR ) Part 135 as an on - demand air taxi operation .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "135",
+          "position": 150,
+          "context": "The sightseeing tour flight was operating under 14 Code of Federal Regulations ( CFR ) Part 135 as an on - demand air taxi operation .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORGANIZATION",
+          "value": null,
+          "mention": "VMC",
+          "position": 203,
+          "context": "A visual flight rules ( VFR ) flight plan was filed , and visual meteorological conditions ( VMC ) existed at the Keahole - Kona International Airport ( KOA ) , Kona , Hawaii , from which the airplane departed about 1622 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Keahole-Kona International Airport",
+          "position": 208,
+          "context": "A visual flight rules ( VFR ) flight plan was filed , and visual meteorological conditions ( VMC ) existed at the Keahole - Kona International Airport ( KOA ) , Kona , Hawaii , from which the airplane departed about 1622 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Kona",
+          "position": 217,
+          "context": "A visual flight rules ( VFR ) flight plan was filed , and visual meteorological conditions ( VMC ) existed at the Keahole - Kona International Airport ( KOA ) , Kona , Hawaii , from which the airplane departed about 1622 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "STATE_OR_PROVINCE",
+          "value": null,
+          "mention": "Hawaii",
+          "position": 219,
+          "context": "A visual flight rules ( VFR ) flight plan was filed , and visual meteorological conditions ( VMC ) existed at the Keahole - Kona International Airport ( KOA ) , Kona , Hawaii , from which the airplane departed about 1622 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "about 1622",
+          "position": 226,
+          "context": "A visual flight rules ( VFR ) flight plan was filed , and visual meteorological conditions ( VMC ) existed at the Keahole - Kona International Airport ( KOA ) , Kona , Hawaii , from which the airplane departed about 1622 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CAUSE_OF_DEATH",
+          "value": null,
+          "mention": "accident",
+          "position": 288,
+          "context": "The investigation determined that instrument meteorological conditions ( IMC ) prevailed in the vicinity of the accident site .",
+          "embedding": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,5 @@
+STARTED 01.03.2024 20:19:30 scripts/load_data.py trex-wikidata
+	Output path: /home/murban/Documents/Repos/multimodal-db/eleet_pretrain/datasets/preprocessed_data/preprocessed_trex-wikidata_7d11d2f_577c9835/data.h5
+	Logging path: /home/murban/Documents/Repos/multimodal-db/eleet_pretrain/datasets/preprocessed_data/preprocessed_trex-wikidata_7d11d2f_577c9835/2024-03-01_20-19-29_preprocessing.log
+FAILED 01.03.2024 20:19:30 until 01.03.2024 20:19:42 ( 0:00:11.487595 ) scripts/load_data.py trex-wikidata
+	Exception: KeyboardInterrupt 

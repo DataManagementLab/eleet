@@ -1,0 +1,844 @@
+{
+  "text": "On October 25, 1999, about 1213 central daylight time (CDT), a Learjet Model 35, N47BA, operated by Sunjet Aviation, Inc., of Sanford, Florida, crashed near Aberdeen, South Dakota. The airplane departed Orlando, Florida, for Dallas, Texas, about 0920 eastern daylight time (EDT). Radio contact with the flight was lost north of Gainesville, Florida, after air traffic control (ATC) cleared the airplane to flight level (FL) 390. The airplane was intercepted by several U.S. Air Force (USAF) and Air National Guard (ANG) aircraft as it proceeded northwestbound. The military pilots in a position to observe the accident airplane at close range stated (in interviews or via radio transmissions) that the forward windshields of the Learjet seemed to be frosted or covered with condensation. The military pilots could not see into the cabin. They did not observe any structural anomaly or other unusual condition. The military pilots observed the airplane depart controlled flight and spiral to the ground, impacting an open field. All occupants on board the airplane (the captain, first officer, and four passengers) were killed, and the airplane was destroyed.",
+  "report_number": "AAB-00-01",
+  "mentions": {
+    "event_date": [
+      {
+        "mention": "October 25, 1999",
+        "start": 3,
+        "length": 16
+      }
+    ],
+    "location_city": [
+      {
+        "mention": "Aberdeen",
+        "start": 157,
+        "length": 8
+      }
+    ],
+    "location_state": [
+      {
+        "mention": "South Dakota",
+        "start": 167,
+        "length": 12
+      }
+    ],
+    "airport_code": [],
+    "airport_name": [],
+    "aircraft_damage": [
+      {
+        "mention": "destroyed",
+        "start": 1148,
+        "length": 9
+      }
+    ],
+    "aircraft_registration_number": [
+      {
+        "mention": "N47BA",
+        "start": 81,
+        "length": 5
+      }
+    ],
+    "aircraft_make": [
+      {
+        "mention": "Learjet",
+        "start": 63,
+        "length": 7
+      },
+      {
+        "mention": "Learjet",
+        "start": 729,
+        "length": 7
+      }
+    ],
+    "aircraft_model": [
+      {
+        "mention": "Model 35",
+        "start": 71,
+        "length": 8
+      }
+    ],
+    "far_description": [],
+    "air_carrier": [
+      {
+        "mention": "Sunjet Aviation",
+        "start": 100,
+        "length": 15
+      }
+    ],
+    "total_fatal_injuries": [
+      {
+        "mention": "All occupants on board the airplane (the captain, first officer, and four passengers) were killed",
+        "start": 1028,
+        "length": 97
+      }
+    ],
+    "total_serious_injuries": [
+      {
+        "mention": "All occupants on board the airplane (the captain, first officer, and four passengers) were killed",
+        "start": 1028,
+        "length": 97
+      }
+    ],
+    "total_minor_injuries": [
+      {
+        "mention": "All occupants on board the airplane (the captain, first officer, and four passengers) were killed",
+        "start": 1028,
+        "length": 97
+      }
+    ],
+    "total_uninjured": [
+      {
+        "mention": "All occupants on board the airplane (the captain, first officer, and four passengers) were killed",
+        "start": 1028,
+        "length": 97
+      }
+    ],
+    "weather_condition": []
+  },
+  "mentions_diff_value": {
+    "event_date": [],
+    "location_city": [
+      {
+        "mention": "Sanford",
+        "start": 126,
+        "length": 7
+      },
+      {
+        "mention": "Orlando",
+        "start": 203,
+        "length": 7
+      },
+      {
+        "mention": "Dallas",
+        "start": 225,
+        "length": 6
+      },
+      {
+        "mention": "Gainesville",
+        "start": 328,
+        "length": 11
+      }
+    ],
+    "location_state": [
+      {
+        "mention": "Florida",
+        "start": 135,
+        "length": 7
+      },
+      {
+        "mention": "Florida",
+        "start": 212,
+        "length": 7
+      },
+      {
+        "mention": "Texas",
+        "start": 233,
+        "length": 5
+      },
+      {
+        "mention": "Florida",
+        "start": 341,
+        "length": 7
+      }
+    ],
+    "airport_code": [],
+    "airport_name": [],
+    "aircraft_damage": [],
+    "aircraft_registration_number": [],
+    "aircraft_make": [],
+    "aircraft_model": [],
+    "far_description": [],
+    "air_carrier": [],
+    "total_fatal_injuries": [],
+    "total_serious_injuries": [],
+    "total_minor_injuries": [],
+    "total_uninjured": [],
+    "weather_condition": []
+  },
+  "mention_kinds": {
+    "event_date": "mentioned",
+    "location_city": "mentioned",
+    "location_state": "mentioned",
+    "airport_code": "not-mentioned",
+    "airport_name": "not-mentioned",
+    "aircraft_damage": "mentioned",
+    "aircraft_registration_number": "mentioned",
+    "aircraft_make": "mentioned",
+    "aircraft_model": "mentioned",
+    "far_description": "not-mentioned",
+    "air_carrier": "mentioned",
+    "total_fatal_injuries": "derivable",
+    "total_serious_injuries": "derivable",
+    "total_minor_injuries": "derivable",
+    "total_uninjured": "derivable",
+    "weather_condition": "not-mentioned"
+  },
+  "evaluation": {
+    "Stanza": {
+      "mentions": {
+        "event_date": [
+          0
+        ],
+        "location_city": [
+          7
+        ],
+        "location_state": [
+          8
+        ],
+        "airport_code": [],
+        "airport_name": [],
+        "aircraft_damage": [],
+        "aircraft_registration_number": [
+          3
+        ],
+        "aircraft_make": [
+          22,
+          2
+        ],
+        "aircraft_model": [
+          2
+        ],
+        "far_description": [],
+        "air_carrier": [
+          4
+        ],
+        "total_fatal_injuries": [],
+        "total_serious_injuries": [],
+        "total_minor_injuries": [],
+        "total_uninjured": [],
+        "weather_condition": []
+      },
+      "mentions_diff_value": {
+        "event_date": [],
+        "location_city": [
+          5,
+          9,
+          11,
+          14
+        ],
+        "location_state": [
+          6,
+          10,
+          12,
+          15
+        ],
+        "airport_code": [],
+        "airport_name": [],
+        "aircraft_damage": [],
+        "aircraft_registration_number": [],
+        "aircraft_make": [],
+        "aircraft_model": [],
+        "far_description": [],
+        "air_carrier": [],
+        "total_fatal_injuries": [],
+        "total_serious_injuries": [],
+        "total_minor_injuries": [],
+        "total_uninjured": [],
+        "weather_condition": []
+      },
+      "all_extractions": [
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "October 25, 1999",
+          "position": 1,
+          "context": "On October 25, 1999, about 1213 central daylight time (CDT), a Learjet Model 35, N47BA, operated by Sunjet Aviation, Inc., of Sanford, Florida, crashed near Aberdeen, South Dakota.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "about 1213",
+          "position": 6,
+          "context": "On October 25, 1999, about 1213 central daylight time (CDT), a Learjet Model 35, N47BA, operated by Sunjet Aviation, Inc., of Sanford, Florida, crashed near Aberdeen, South Dakota.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "PRODUCT",
+          "value": null,
+          "mention": "Learjet Model 35",
+          "position": 16,
+          "context": "On October 25, 1999, about 1213 central daylight time (CDT), a Learjet Model 35, N47BA, operated by Sunjet Aviation, Inc., of Sanford, Florida, crashed near Aberdeen, South Dakota.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "PRODUCT",
+          "value": null,
+          "mention": "N47BA",
+          "position": 20,
+          "context": "On October 25, 1999, about 1213 central daylight time (CDT), a Learjet Model 35, N47BA, operated by Sunjet Aviation, Inc., of Sanford, Florida, crashed near Aberdeen, South Dakota.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "Sunjet Aviation, Inc.",
+          "position": 25,
+          "context": "On October 25, 1999, about 1213 central daylight time (CDT), a Learjet Model 35, N47BA, operated by Sunjet Aviation, Inc., of Sanford, Florida, crashed near Aberdeen, South Dakota.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Sanford",
+          "position": 31,
+          "context": "On October 25, 1999, about 1213 central daylight time (CDT), a Learjet Model 35, N47BA, operated by Sunjet Aviation, Inc., of Sanford, Florida, crashed near Aberdeen, South Dakota.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Florida",
+          "position": 33,
+          "context": "On October 25, 1999, about 1213 central daylight time (CDT), a Learjet Model 35, N47BA, operated by Sunjet Aviation, Inc., of Sanford, Florida, crashed near Aberdeen, South Dakota.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Aberdeen",
+          "position": 37,
+          "context": "On October 25, 1999, about 1213 central daylight time (CDT), a Learjet Model 35, N47BA, operated by Sunjet Aviation, Inc., of Sanford, Florida, crashed near Aberdeen, South Dakota.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "South Dakota",
+          "position": 39,
+          "context": "On October 25, 1999, about 1213 central daylight time (CDT), a Learjet Model 35, N47BA, operated by Sunjet Aviation, Inc., of Sanford, Florida, crashed near Aberdeen, South Dakota.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Orlando",
+          "position": 45,
+          "context": "The airplane departed Orlando, Florida, for Dallas, Texas, about 0920 eastern daylight time (EDT).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Florida",
+          "position": 47,
+          "context": "The airplane departed Orlando, Florida, for Dallas, Texas, about 0920 eastern daylight time (EDT).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Dallas",
+          "position": 50,
+          "context": "The airplane departed Orlando, Florida, for Dallas, Texas, about 0920 eastern daylight time (EDT).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Texas",
+          "position": 52,
+          "context": "The airplane departed Orlando, Florida, for Dallas, Texas, about 0920 eastern daylight time (EDT).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "TIME",
+          "value": null,
+          "mention": "0920 eastern daylight",
+          "position": 55,
+          "context": "The airplane departed Orlando, Florida, for Dallas, Texas, about 0920 eastern daylight time (EDT).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Gainesville",
+          "position": 72,
+          "context": "Radio contact with the flight was lost north of Gainesville, Florida, after air traffic control (ATC) cleared the airplane to flight level (FL) 390.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Florida",
+          "position": 74,
+          "context": "Radio contact with the flight was lost north of Gainesville, Florida, after air traffic control (ATC) cleared the airplane to flight level (FL) 390.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "ATC",
+          "position": 81,
+          "context": "Radio contact with the flight was lost north of Gainesville, Florida, after air traffic control (ATC) cleared the airplane to flight level (FL) 390.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "390",
+          "position": 92,
+          "context": "Radio contact with the flight was lost north of Gainesville, Florida, after air traffic control (ATC) cleared the airplane to flight level (FL) 390.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "U.S. Air Force",
+          "position": 100,
+          "context": "The airplane was intercepted by several U.S. Air Force (USAF) and Air National Guard (ANG) aircraft as it proceeded northwestbound.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "USAF",
+          "position": 104,
+          "context": "The airplane was intercepted by several U.S. Air Force (USAF) and Air National Guard (ANG) aircraft as it proceeded northwestbound.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "Air National Guard",
+          "position": 107,
+          "context": "The airplane was intercepted by several U.S. Air Force (USAF) and Air National Guard (ANG) aircraft as it proceeded northwestbound.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "ANG",
+          "position": 111,
+          "context": "The airplane was intercepted by several U.S. Air Force (USAF) and Air National Guard (ANG) aircraft as it proceeded northwestbound.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "PRODUCT",
+          "value": null,
+          "mention": "Learjet",
+          "position": 148,
+          "context": "The military pilots in a position to observe the accident airplane at close range stated (in interviews or via radio transmissions) that the forward windshields of the Learjet seemed to be frosted or covered with condensation.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "ORDINAL",
+          "value": null,
+          "mention": "first",
+          "position": 210,
+          "context": "All occupants on board the airplane (the captain, first officer, and four passengers) were killed, and the airplane was destroyed.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "four",
+          "position": 214,
+          "context": "All occupants on board the airplane (the captain, first officer, and four passengers) were killed, and the airplane was destroyed.",
+          "embedding": null
+        }
+      ]
+    },
+    "Stanford-CoreNLP": {
+      "mentions": {
+        "event_date": [
+          0
+        ],
+        "location_city": [
+          8
+        ],
+        "location_state": [
+          9
+        ],
+        "airport_code": [],
+        "airport_name": [],
+        "aircraft_damage": [],
+        "aircraft_registration_number": [],
+        "aircraft_make": [
+          25
+        ],
+        "aircraft_model": [],
+        "far_description": [],
+        "air_carrier": [
+          5
+        ],
+        "total_fatal_injuries": [],
+        "total_serious_injuries": [],
+        "total_minor_injuries": [],
+        "total_uninjured": [],
+        "weather_condition": []
+      },
+      "mentions_diff_value": {
+        "event_date": [],
+        "location_city": [
+          6,
+          10,
+          12,
+          16
+        ],
+        "location_state": [
+          7,
+          11,
+          13,
+          17
+        ],
+        "airport_code": [],
+        "airport_name": [],
+        "aircraft_damage": [],
+        "aircraft_registration_number": [],
+        "aircraft_make": [],
+        "aircraft_model": [],
+        "far_description": [],
+        "air_carrier": [],
+        "total_fatal_injuries": [],
+        "total_serious_injuries": [],
+        "total_minor_injuries": [],
+        "total_uninjured": [],
+        "weather_condition": []
+      },
+      "all_extractions": [
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "October 25, 1999",
+          "position": 1,
+          "context": "On October 25 , 1999 , about 1213 central daylight time ( CDT ) , a Learjet Model 35 , N47BA , operated by Sunjet Aviation , Inc. , of Sanford , Florida , crashed near Aberdeen , South Dakota .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "about 1213",
+          "position": 6,
+          "context": "On October 25 , 1999 , about 1213 central daylight time ( CDT ) , a Learjet Model 35 , N47BA , operated by Sunjet Aviation , Inc. , of Sanford , Florida , crashed near Aberdeen , South Dakota .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "TIME",
+          "value": null,
+          "mention": "daylight",
+          "position": 9,
+          "context": "On October 25 , 1999 , about 1213 central daylight time ( CDT ) , a Learjet Model 35 , N47BA , operated by Sunjet Aviation , Inc. , of Sanford , Florida , crashed near Aberdeen , South Dakota .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "TITLE",
+          "value": null,
+          "mention": "Model",
+          "position": 17,
+          "context": "On October 25 , 1999 , about 1213 central daylight time ( CDT ) , a Learjet Model 35 , N47BA , operated by Sunjet Aviation , Inc. , of Sanford , Florida , crashed near Aberdeen , South Dakota .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "35",
+          "position": 18,
+          "context": "On October 25 , 1999 , about 1213 central daylight time ( CDT ) , a Learjet Model 35 , N47BA , operated by Sunjet Aviation , Inc. , of Sanford , Florida , crashed near Aberdeen , South Dakota .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORGANIZATION",
+          "value": null,
+          "mention": "Sunjet Aviation, Inc.",
+          "position": 24,
+          "context": "On October 25 , 1999 , about 1213 central daylight time ( CDT ) , a Learjet Model 35 , N47BA , operated by Sunjet Aviation , Inc. , of Sanford , Florida , crashed near Aberdeen , South Dakota .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CITY",
+          "value": null,
+          "mention": "Sanford",
+          "position": 30,
+          "context": "On October 25 , 1999 , about 1213 central daylight time ( CDT ) , a Learjet Model 35 , N47BA , operated by Sunjet Aviation , Inc. , of Sanford , Florida , crashed near Aberdeen , South Dakota .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "STATE_OR_PROVINCE",
+          "value": null,
+          "mention": "Florida",
+          "position": 32,
+          "context": "On October 25 , 1999 , about 1213 central daylight time ( CDT ) , a Learjet Model 35 , N47BA , operated by Sunjet Aviation , Inc. , of Sanford , Florida , crashed near Aberdeen , South Dakota .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CITY",
+          "value": null,
+          "mention": "Aberdeen",
+          "position": 36,
+          "context": "On October 25 , 1999 , about 1213 central daylight time ( CDT ) , a Learjet Model 35 , N47BA , operated by Sunjet Aviation , Inc. , of Sanford , Florida , crashed near Aberdeen , South Dakota .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "STATE_OR_PROVINCE",
+          "value": null,
+          "mention": "South Dakota",
+          "position": 38,
+          "context": "On October 25 , 1999 , about 1213 central daylight time ( CDT ) , a Learjet Model 35 , N47BA , operated by Sunjet Aviation , Inc. , of Sanford , Florida , crashed near Aberdeen , South Dakota .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CITY",
+          "value": null,
+          "mention": "Orlando",
+          "position": 85,
+          "context": "The airplane departed Orlando , Florida , for Dallas , Texas , about 0920 eastern daylight time ( EDT ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "STATE_OR_PROVINCE",
+          "value": null,
+          "mention": "Florida",
+          "position": 87,
+          "context": "The airplane departed Orlando , Florida , for Dallas , Texas , about 0920 eastern daylight time ( EDT ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CITY",
+          "value": null,
+          "mention": "Dallas",
+          "position": 90,
+          "context": "The airplane departed Orlando , Florida , for Dallas , Texas , about 0920 eastern daylight time ( EDT ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "STATE_OR_PROVINCE",
+          "value": null,
+          "mention": "Texas",
+          "position": 92,
+          "context": "The airplane departed Orlando , Florida , for Dallas , Texas , about 0920 eastern daylight time ( EDT ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "about 0920",
+          "position": 94,
+          "context": "The airplane departed Orlando , Florida , for Dallas , Texas , about 0920 eastern daylight time ( EDT ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "TIME",
+          "value": null,
+          "mention": "daylight",
+          "position": 97,
+          "context": "The airplane departed Orlando , Florida , for Dallas , Texas , about 0920 eastern daylight time ( EDT ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CITY",
+          "value": null,
+          "mention": "Gainesville",
+          "position": 133,
+          "context": "Radio contact with the flight was lost north of Gainesville , Florida , after air traffic control ( ATC ) cleared the airplane to flight level ( FL ) 390 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "STATE_OR_PROVINCE",
+          "value": null,
+          "mention": "Florida",
+          "position": 135,
+          "context": "Radio contact with the flight was lost north of Gainesville , Florida , after air traffic control ( ATC ) cleared the airplane to flight level ( FL ) 390 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORGANIZATION",
+          "value": null,
+          "mention": "ATC",
+          "position": 142,
+          "context": "Radio contact with the flight was lost north of Gainesville , Florida , after air traffic control ( ATC ) cleared the airplane to flight level ( FL ) 390 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "STATE_OR_PROVINCE",
+          "value": null,
+          "mention": "FL",
+          "position": 151,
+          "context": "Radio contact with the flight was lost north of Gainesville , Florida , after air traffic control ( ATC ) cleared the airplane to flight level ( FL ) 390 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "390",
+          "position": 153,
+          "context": "Radio contact with the flight was lost north of Gainesville , Florida , after air traffic control ( ATC ) cleared the airplane to flight level ( FL ) 390 .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORGANIZATION",
+          "value": null,
+          "mention": "U.S. Air Force",
+          "position": 192,
+          "context": "The airplane was intercepted by several U.S. Air Force ( USAF ) and Air National Guard ( ANG ) aircraft as it proceeded northwestbound .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORGANIZATION",
+          "value": null,
+          "mention": "USAF",
+          "position": 196,
+          "context": "The airplane was intercepted by several U.S. Air Force ( USAF ) and Air National Guard ( ANG ) aircraft as it proceeded northwestbound .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORGANIZATION",
+          "value": null,
+          "mention": "Air National Guard",
+          "position": 199,
+          "context": "The airplane was intercepted by several U.S. Air Force ( USAF ) and Air National Guard ( ANG ) aircraft as it proceeded northwestbound .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CAUSE_OF_DEATH",
+          "value": null,
+          "mention": "accident",
+          "position": 245,
+          "context": "The military pilots in a position to observe the accident airplane at close range stated ( in interviews or via radio transmissions ) that the forward windshields of the Learjet seemed to be frosted or covered with condensation .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "MISC",
+          "value": null,
+          "mention": "Learjet",
+          "position": 265,
+          "context": "The military pilots in a position to observe the accident airplane at close range stated ( in interviews or via radio transmissions ) that the forward windshields of the Learjet seemed to be frosted or covered with condensation .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "TITLE",
+          "value": null,
+          "mention": "captain",
+          "position": 406,
+          "context": "All occupants on board the airplane ( the captain , first officer , and four passengers ) were killed , and the airplane was destroyed .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORDINAL",
+          "value": null,
+          "mention": "first",
+          "position": 408,
+          "context": "All occupants on board the airplane ( the captain , first officer , and four passengers ) were killed , and the airplane was destroyed .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "four",
+          "position": 412,
+          "context": "All occupants on board the airplane ( the captain , first officer , and four passengers ) were killed , and the airplane was destroyed .",
+          "embedding": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1285 @@
+{
+  "text": "Summary (as of 06/02/2021, 12:00 AM)\r\n\u2022 Currently, the number of transmissions in the population in Germany remains high. RKI assesses the level of threat to the\r\nhealth of the general population to be very high.\r\n\u2022 Yesterday, 10,485 new laboratory-confirmed COVID-19 cases as well as 689 new deaths associated with COVID-19 were\r\ntransmitted to the RKI. The national 7-day incidence is 77 cases per 100,000 population. In Bavaria, Bremen, Hesse and\r\nMecklenburg-Western Pomerania it is slightly, in Brandenburg, Saarland, Saxony, Saxony-Anhalt, and Thuringia considerably\r\nabove the national incidence.\r\n\u2022 In 331 of the 412 districts, the 7-day COVID-19 incidence is high (>50 cases/100,000 population). In 97 districts, the 7-day\r\nincidence is >100 cases/100,000 population and in 5 of these districts it is >250-500 cases/100,000 population.\r\n\u2022 The 7-day incidence among people aged 60-79 years is currently 60 and of people aged \u226580 years, 136 cases/100,000\r\npopulation.\r\n\u2022 The high nationwide number of cases is caused by increasingly diffuse transmission, with numerous clusters especially in\r\nhouseholds, occupational settings and nursing and long-term care homes.\r\n\u2022 On 06/02/2021 (12:15 PM) 3,965 COVID-19 patients were in intensive care. In the preceding 24 hours, +416 existing patients had\r\nbeen discharged (31% of whom had died) and +309 patients were newly admitted. The resulting number of cases under\r\ntreatment was -107 more than the prior day.\r\n\u2022 Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once (vaccination rate 2.7%) and\r\n903,271 people twice (vaccination rate 1.1%) against COVID-19 (http://www.rki.de/covid-19-impfquoten).",
+  "report_number": "2021-02-06",
+  "mentions": {
+    "date": [
+      {
+        "mention": "06/02/2021",
+        "start": 15,
+        "length": 10
+      }
+    ],
+    "new_cases": [
+      {
+        "mention": "10,485",
+        "start": 224,
+        "length": 6
+      }
+    ],
+    "new_deaths": [
+      {
+        "mention": "689",
+        "start": 282,
+        "length": 3
+      }
+    ],
+    "incidence": [
+      {
+        "mention": "77",
+        "start": 383,
+        "length": 2
+      }
+    ],
+    "high_incidence_districts": [
+      {
+        "mention": "331",
+        "start": 603,
+        "length": 3
+      }
+    ],
+    "patients_intensive_care": [
+      {
+        "mention": "3,965",
+        "start": 1187,
+        "length": 5
+      }
+    ],
+    "vaccinated": [
+      {
+        "mention": "2,212,851",
+        "start": 1477,
+        "length": 9
+      }
+    ],
+    "twice_vaccinated": [
+      {
+        "mention": "903,271",
+        "start": 1568,
+        "length": 7
+      }
+    ]
+  },
+  "mentions_diff_value": {
+    "date": [],
+    "new_cases": [],
+    "new_deaths": [],
+    "incidence": [],
+    "high_incidence_districts": [],
+    "patients_intensive_care": [],
+    "vaccinated": [],
+    "twice_vaccinated": []
+  },
+  "mention_kinds": {
+    "date": "mentioned",
+    "new_cases": "mentioned",
+    "new_deaths": "mentioned",
+    "incidence": "mentioned",
+    "high_incidence_districts": "mentioned",
+    "patients_intensive_care": "mentioned",
+    "vaccinated": "mentioned",
+    "twice_vaccinated": "mentioned"
+  },
+  "evaluation": {
+    "Stanza": {
+      "mentions": {
+        "date": [
+          0,
+          41
+        ],
+        "new_cases": [
+          5
+        ],
+        "new_deaths": [
+          7
+        ],
+        "incidence": [
+          11
+        ],
+        "high_incidence_districts": [
+          22
+        ],
+        "patients_intensive_care": [
+          42
+        ],
+        "vaccinated": [
+          51
+        ],
+        "twice_vaccinated": [
+          54
+        ]
+      },
+      "mentions_diff_value": {
+        "date": [],
+        "new_cases": [],
+        "new_deaths": [],
+        "incidence": [],
+        "high_incidence_districts": [],
+        "patients_intensive_care": [],
+        "vaccinated": [],
+        "twice_vaccinated": []
+      },
+      "all_extractions": [
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "TIME",
+          "value": null,
+          "mention": "06/02/2021",
+          "position": 4,
+          "context": "Summary (as of 06/02/2021, 12:00 AM)\r\n\u2022 Currently, the number of transmissions in the population in Germany remains high.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "TIME",
+          "value": null,
+          "mention": "12:00 AM",
+          "position": 6,
+          "context": "Summary (as of 06/02/2021, 12:00 AM)\r\n\u2022 Currently, the number of transmissions in the population in Germany remains high.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Germany",
+          "position": 20,
+          "context": "Summary (as of 06/02/2021, 12:00 AM)\r\n\u2022 Currently, the number of transmissions in the population in Germany remains high.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "RKI",
+          "position": 24,
+          "context": "RKI assesses the level of threat to the\r\nhealth of the general population to be very high.\r\n\u2022 Yesterday, 10,485 new laboratory-confirmed COVID-19 cases as well as 689 new deaths associated with COVID-19 were\r\ntransmitted to the RKI.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "Yesterday",
+          "position": 43,
+          "context": "RKI assesses the level of threat to the\r\nhealth of the general population to be very high.\r\n\u2022 Yesterday, 10,485 new laboratory-confirmed COVID-19 cases as well as 689 new deaths associated with COVID-19 were\r\ntransmitted to the RKI.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "10,485",
+          "position": 45,
+          "context": "RKI assesses the level of threat to the\r\nhealth of the general population to be very high.\r\n\u2022 Yesterday, 10,485 new laboratory-confirmed COVID-19 cases as well as 689 new deaths associated with COVID-19 were\r\ntransmitted to the RKI.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "19",
+          "position": 52,
+          "context": "RKI assesses the level of threat to the\r\nhealth of the general population to be very high.\r\n\u2022 Yesterday, 10,485 new laboratory-confirmed COVID-19 cases as well as 689 new deaths associated with COVID-19 were\r\ntransmitted to the RKI.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "689",
+          "position": 57,
+          "context": "RKI assesses the level of threat to the\r\nhealth of the general population to be very high.\r\n\u2022 Yesterday, 10,485 new laboratory-confirmed COVID-19 cases as well as 689 new deaths associated with COVID-19 were\r\ntransmitted to the RKI.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "PRODUCT",
+          "value": null,
+          "mention": "COVID-19",
+          "position": 62,
+          "context": "RKI assesses the level of threat to the\r\nhealth of the general population to be very high.\r\n\u2022 Yesterday, 10,485 new laboratory-confirmed COVID-19 cases as well as 689 new deaths associated with COVID-19 were\r\ntransmitted to the RKI.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "RKI",
+          "position": 69,
+          "context": "RKI assesses the level of threat to the\r\nhealth of the general population to be very high.\r\n\u2022 Yesterday, 10,485 new laboratory-confirmed COVID-19 cases as well as 689 new deaths associated with COVID-19 were\r\ntransmitted to the RKI.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "7-day",
+          "position": 73,
+          "context": "The national 7-day incidence is 77 cases per 100,000 population.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "77",
+          "position": 78,
+          "context": "The national 7-day incidence is 77 cases per 100,000 population.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100,000",
+          "position": 81,
+          "context": "The national 7-day incidence is 77 cases per 100,000 population.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Bavaria",
+          "position": 85,
+          "context": "In Bavaria, Bremen, Hesse and\r\nMecklenburg-Western Pomerania it is slightly, in Brandenburg, Saarland, Saxony, Saxony-Anhalt, and Thuringia considerably\r\nabove the national incidence.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Bremen",
+          "position": 87,
+          "context": "In Bavaria, Bremen, Hesse and\r\nMecklenburg-Western Pomerania it is slightly, in Brandenburg, Saarland, Saxony, Saxony-Anhalt, and Thuringia considerably\r\nabove the national incidence.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Hesse",
+          "position": 89,
+          "context": "In Bavaria, Bremen, Hesse and\r\nMecklenburg-Western Pomerania it is slightly, in Brandenburg, Saarland, Saxony, Saxony-Anhalt, and Thuringia considerably\r\nabove the national incidence.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "FAC",
+          "value": null,
+          "mention": "Mecklenburg-Western Pomerania",
+          "position": 91,
+          "context": "In Bavaria, Bremen, Hesse and\r\nMecklenburg-Western Pomerania it is slightly, in Brandenburg, Saarland, Saxony, Saxony-Anhalt, and Thuringia considerably\r\nabove the national incidence.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Brandenburg",
+          "position": 100,
+          "context": "In Bavaria, Bremen, Hesse and\r\nMecklenburg-Western Pomerania it is slightly, in Brandenburg, Saarland, Saxony, Saxony-Anhalt, and Thuringia considerably\r\nabove the national incidence.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Saarland",
+          "position": 102,
+          "context": "In Bavaria, Bremen, Hesse and\r\nMecklenburg-Western Pomerania it is slightly, in Brandenburg, Saarland, Saxony, Saxony-Anhalt, and Thuringia considerably\r\nabove the national incidence.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Saxony",
+          "position": 104,
+          "context": "In Bavaria, Bremen, Hesse and\r\nMecklenburg-Western Pomerania it is slightly, in Brandenburg, Saarland, Saxony, Saxony-Anhalt, and Thuringia considerably\r\nabove the national incidence.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Saxony-Anhalt",
+          "position": 106,
+          "context": "In Bavaria, Bremen, Hesse and\r\nMecklenburg-Western Pomerania it is slightly, in Brandenburg, Saarland, Saxony, Saxony-Anhalt, and Thuringia considerably\r\nabove the national incidence.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Thuringia",
+          "position": 111,
+          "context": "In Bavaria, Bremen, Hesse and\r\nMecklenburg-Western Pomerania it is slightly, in Brandenburg, Saarland, Saxony, Saxony-Anhalt, and Thuringia considerably\r\nabove the national incidence.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "331",
+          "position": 120,
+          "context": "In 331 of the 412 districts, the 7-day COVID-19 incidence is high (>50 cases/100,000 population).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "412",
+          "position": 123,
+          "context": "In 331 of the 412 districts, the 7-day COVID-19 incidence is high (>50 cases/100,000 population).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "7-day",
+          "position": 127,
+          "context": "In 331 of the 412 districts, the 7-day COVID-19 incidence is high (>50 cases/100,000 population).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "19",
+          "position": 132,
+          "context": "In 331 of the 412 districts, the 7-day COVID-19 incidence is high (>50 cases/100,000 population).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "50",
+          "position": 138,
+          "context": "In 331 of the 412 districts, the 7-day COVID-19 incidence is high (>50 cases/100,000 population).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100,000",
+          "position": 141,
+          "context": "In 331 of the 412 districts, the 7-day COVID-19 incidence is high (>50 cases/100,000 population).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "97",
+          "position": 146,
+          "context": "In 97 districts, the 7-day\r\nincidence is >100 cases/100,000 population and in 5 of these districts it is >250-500 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "7-day",
+          "position": 150,
+          "context": "In 97 districts, the 7-day\r\nincidence is >100 cases/100,000 population and in 5 of these districts it is >250-500 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100",
+          "position": 156,
+          "context": "In 97 districts, the 7-day\r\nincidence is >100 cases/100,000 population and in 5 of these districts it is >250-500 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100,000",
+          "position": 159,
+          "context": "In 97 districts, the 7-day\r\nincidence is >100 cases/100,000 population and in 5 of these districts it is >250-500 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "5",
+          "position": 163,
+          "context": "In 97 districts, the 7-day\r\nincidence is >100 cases/100,000 population and in 5 of these districts it is >250-500 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": ">250-500",
+          "position": 169,
+          "context": "In 97 districts, the 7-day\r\nincidence is >100 cases/100,000 population and in 5 of these districts it is >250-500 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100,000",
+          "position": 172,
+          "context": "In 97 districts, the 7-day\r\nincidence is >100 cases/100,000 population and in 5 of these districts it is >250-500 cases/100,000 population.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "7-day",
+          "position": 177,
+          "context": "The 7-day incidence among people aged 60-79 years is currently 60 and of people aged \u226580 years, 136 cases/100,000\r\npopulation.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "60-79 years",
+          "position": 184,
+          "context": "The 7-day incidence among people aged 60-79 years is currently 60 and of people aged \u226580 years, 136 cases/100,000\r\npopulation.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "60",
+          "position": 190,
+          "context": "The 7-day incidence among people aged 60-79 years is currently 60 and of people aged \u226580 years, 136 cases/100,000\r\npopulation.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "\u226580 years",
+          "position": 195,
+          "context": "The 7-day incidence among people aged 60-79 years is currently 60 and of people aged \u226580 years, 136 cases/100,000\r\npopulation.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "136",
+          "position": 199,
+          "context": "The 7-day incidence among people aged 60-79 years is currently 60 and of people aged \u226580 years, 136 cases/100,000\r\npopulation.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "100,000",
+          "position": 202,
+          "context": "The 7-day incidence among people aged 60-79 years is currently 60 and of people aged \u226580 years, 136 cases/100,000\r\npopulation.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "06/02/2021",
+          "position": 239,
+          "context": "On 06/02/2021 (12:15 PM) 3,965 COVID-19 patients were in intensive care.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "3,965",
+          "position": 244,
+          "context": "On 06/02/2021 (12:15 PM) 3,965 COVID-19 patients were in intensive care.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "19",
+          "position": 247,
+          "context": "On 06/02/2021 (12:15 PM) 3,965 COVID-19 patients were in intensive care.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "TIME",
+          "value": null,
+          "mention": "the preceding 24 hours",
+          "position": 255,
+          "context": "In the preceding 24 hours, +416 existing patients had\r\nbeen discharged (31% of whom had died) and +309 patients were newly admitted.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "416",
+          "position": 261,
+          "context": "In the preceding 24 hours, +416 existing patients had\r\nbeen discharged (31% of whom had died) and +309 patients were newly admitted.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "PERCENT",
+          "value": null,
+          "mention": "31%",
+          "position": 268,
+          "context": "In the preceding 24 hours, +416 existing patients had\r\nbeen discharged (31% of whom had died) and +309 patients were newly admitted.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "309",
+          "position": 277,
+          "context": "In the preceding 24 hours, +416 existing patients had\r\nbeen discharged (31% of whom had died) and +309 patients were newly admitted.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "107",
+          "position": 292,
+          "context": "The resulting number of cases under\r\ntreatment was -107 more than the prior day.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "the prior day",
+          "position": 295,
+          "context": "The resulting number of cases under\r\ntreatment was -107 more than the prior day.\r\n\u2022",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "26/12/2020",
+          "position": 301,
+          "context": "Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once (vaccination rate 2.7%) and\r\n903,271 people twice (vaccination rate 1.1%) against COVID-19 (http://www.rki.de/covid-19-impfquoten).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "2,212,851",
+          "position": 305,
+          "context": "Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once (vaccination rate 2.7%) and\r\n903,271 people twice (vaccination rate 1.1%) against COVID-19 (http://www.rki.de/covid-19-impfquoten).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Germany",
+          "position": 308,
+          "context": "Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once (vaccination rate 2.7%) and\r\n903,271 people twice (vaccination rate 1.1%) against COVID-19 (http://www.rki.de/covid-19-impfquoten).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "PERCENT",
+          "value": null,
+          "mention": "2.7%",
+          "position": 318,
+          "context": "Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once (vaccination rate 2.7%) and\r\n903,271 people twice (vaccination rate 1.1%) against COVID-19 (http://www.rki.de/covid-19-impfquoten).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "903,271",
+          "position": 322,
+          "context": "Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once (vaccination rate 2.7%) and\r\n903,271 people twice (vaccination rate 1.1%) against COVID-19 (http://www.rki.de/covid-19-impfquoten).",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "PERCENT",
+          "value": null,
+          "mention": "1.1%",
+          "position": 328,
+          "context": "Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once (vaccination rate 2.7%) and\r\n903,271 people twice (vaccination rate 1.1%) against COVID-19 (http://www.rki.de/covid-19-impfquoten).",
+          "embedding": null
+        }
+      ]
+    },
+    "Stanford-CoreNLP": {
+      "mentions": {
+        "date": [
+          40
+        ],
+        "new_cases": [
+          5
+        ],
+        "new_deaths": [
+          6
+        ],
+        "incidence": [
+          9
+        ],
+        "high_incidence_districts": [
+          20
+        ],
+        "patients_intensive_care": [
+          42
+        ],
+        "vaccinated": [
+          50
+        ],
+        "twice_vaccinated": [
+          54
+        ]
+      },
+      "mentions_diff_value": {
+        "date": [],
+        "new_cases": [],
+        "new_deaths": [],
+        "incidence": [],
+        "high_incidence_districts": [],
+        "patients_intensive_care": [],
+        "vaccinated": [],
+        "twice_vaccinated": []
+      },
+      "all_extractions": [
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "TIME",
+          "value": null,
+          "mention": "06/02/2021, 12:00 AM",
+          "position": 4,
+          "context": "Summary ( as of 06/02/2021 , 12:00 AM ) \u2022 Currently , the number of transmissions in the population in Germany remains high .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "Currently",
+          "position": 10,
+          "context": "Summary ( as of 06/02/2021 , 12:00 AM ) \u2022 Currently , the number of transmissions in the population in Germany remains high .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "COUNTRY",
+          "value": null,
+          "mention": "Germany",
+          "position": 20,
+          "context": "Summary ( as of 06/02/2021 , 12:00 AM ) \u2022 Currently , the number of transmissions in the population in Germany remains high .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "TITLE",
+          "value": null,
+          "mention": "general",
+          "position": 59,
+          "context": "RKI assesses the level of threat to the health of the general population to be very high .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "Yesterday",
+          "position": 85,
+          "context": "\u2022 Yesterday , 10,485 new laboratory - confirmed COVID - 19 cases as well as 689 new deaths associated with COVID - 19 were transmitted to the RKI .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "10,485",
+          "position": 87,
+          "context": "\u2022 Yesterday , 10,485 new laboratory - confirmed COVID - 19 cases as well as 689 new deaths associated with COVID - 19 were transmitted to the RKI .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "689",
+          "position": 99,
+          "context": "\u2022 Yesterday , 10,485 new laboratory - confirmed COVID - 19 cases as well as 689 new deaths associated with COVID - 19 were transmitted to the RKI .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "MISC",
+          "value": null,
+          "mention": "COVID-19",
+          "position": 104,
+          "context": "\u2022 Yesterday , 10,485 new laboratory - confirmed COVID - 19 cases as well as 689 new deaths associated with COVID - 19 were transmitted to the RKI .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DURATION",
+          "value": null,
+          "mention": "7-day",
+          "position": 144,
+          "context": "The national 7 - day incidence is 77 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "77",
+          "position": 149,
+          "context": "The national 7 - day incidence is 77 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100,000",
+          "position": 152,
+          "context": "The national 7 - day incidence is 77 cases per 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Bavaria",
+          "position": 169,
+          "context": "In Bavaria , Bremen , Hesse and Mecklenburg - Western Pomerania it is slightly , in Brandenburg , Saarland , Saxony , Saxony - Anhalt , and Thuringia considerably above the national incidence .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CITY",
+          "value": null,
+          "mention": "Bremen",
+          "position": 171,
+          "context": "In Bavaria , Bremen , Hesse and Mecklenburg - Western Pomerania it is slightly , in Brandenburg , Saarland , Saxony , Saxony - Anhalt , and Thuringia considerably above the national incidence .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Hesse",
+          "position": 173,
+          "context": "In Bavaria , Bremen , Hesse and Mecklenburg - Western Pomerania it is slightly , in Brandenburg , Saarland , Saxony , Saxony - Anhalt , and Thuringia considerably above the national incidence .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Mecklenburg-Western Pomerania",
+          "position": 175,
+          "context": "In Bavaria , Bremen , Hesse and Mecklenburg - Western Pomerania it is slightly , in Brandenburg , Saarland , Saxony , Saxony - Anhalt , and Thuringia considerably above the national incidence .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CITY",
+          "value": null,
+          "mention": "Brandenburg",
+          "position": 184,
+          "context": "In Bavaria , Bremen , Hesse and Mecklenburg - Western Pomerania it is slightly , in Brandenburg , Saarland , Saxony , Saxony - Anhalt , and Thuringia considerably above the national incidence .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Saarland",
+          "position": 186,
+          "context": "In Bavaria , Bremen , Hesse and Mecklenburg - Western Pomerania it is slightly , in Brandenburg , Saarland , Saxony , Saxony - Anhalt , and Thuringia considerably above the national incidence .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Saxony",
+          "position": 188,
+          "context": "In Bavaria , Bremen , Hesse and Mecklenburg - Western Pomerania it is slightly , in Brandenburg , Saarland , Saxony , Saxony - Anhalt , and Thuringia considerably above the national incidence .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Saxony-Anhalt",
+          "position": 190,
+          "context": "In Bavaria , Bremen , Hesse and Mecklenburg - Western Pomerania it is slightly , in Brandenburg , Saarland , Saxony , Saxony - Anhalt , and Thuringia considerably above the national incidence .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "Thuringia",
+          "position": 195,
+          "context": "In Bavaria , Bremen , Hesse and Mecklenburg - Western Pomerania it is slightly , in Brandenburg , Saarland , Saxony , Saxony - Anhalt , and Thuringia considerably above the national incidence .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "331",
+          "position": 238,
+          "context": "\u2022 In 331 of the 412 districts , the 7 - day COVID - 19 incidence is high ( > 50 cases / 100,000 population ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "412",
+          "position": 241,
+          "context": "\u2022 In 331 of the 412 districts , the 7 - day COVID - 19 incidence is high ( > 50 cases / 100,000 population ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DURATION",
+          "value": null,
+          "mention": "7-day",
+          "position": 245,
+          "context": "\u2022 In 331 of the 412 districts , the 7 - day COVID - 19 incidence is high ( > 50 cases / 100,000 population ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "50",
+          "position": 256,
+          "context": "\u2022 In 331 of the 412 districts , the 7 - day COVID - 19 incidence is high ( > 50 cases / 100,000 population ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100,000",
+          "position": 259,
+          "context": "\u2022 In 331 of the 412 districts , the 7 - day COVID - 19 incidence is high ( > 50 cases / 100,000 population ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "97",
+          "position": 291,
+          "context": "In 97 districts , the 7 - day incidence is > 100 cases / 100,000 population and in 5 of these districts it is > 250 - 500 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DURATION",
+          "value": null,
+          "mention": "7-day",
+          "position": 295,
+          "context": "In 97 districts , the 7 - day incidence is > 100 cases / 100,000 population and in 5 of these districts it is > 250 - 500 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100",
+          "position": 301,
+          "context": "In 97 districts , the 7 - day incidence is > 100 cases / 100,000 population and in 5 of these districts it is > 250 - 500 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100,000",
+          "position": 304,
+          "context": "In 97 districts , the 7 - day incidence is > 100 cases / 100,000 population and in 5 of these districts it is > 250 - 500 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "5",
+          "position": 308,
+          "context": "In 97 districts , the 7 - day incidence is > 100 cases / 100,000 population and in 5 of these districts it is > 250 - 500 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "250-500",
+          "position": 315,
+          "context": "In 97 districts , the 7 - day incidence is > 100 cases / 100,000 population and in 5 of these districts it is > 250 - 500 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100,000",
+          "position": 320,
+          "context": "In 97 districts , the 7 - day incidence is > 100 cases / 100,000 population and in 5 of these districts it is > 250 - 500 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DURATION",
+          "value": null,
+          "mention": "7-day",
+          "position": 358,
+          "context": "\u2022 The 7 - day incidence among people aged 60 - 79 years is currently 60 and of people aged \u2265 80 years , 136 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "60-79",
+          "position": 365,
+          "context": "\u2022 The 7 - day incidence among people aged 60 - 79 years is currently 60 and of people aged \u2265 80 years , 136 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DURATION",
+          "value": null,
+          "mention": "years",
+          "position": 368,
+          "context": "\u2022 The 7 - day incidence among people aged 60 - 79 years is currently 60 and of people aged \u2265 80 years , 136 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "currently",
+          "position": 370,
+          "context": "\u2022 The 7 - day incidence among people aged 60 - 79 years is currently 60 and of people aged \u2265 80 years , 136 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "60",
+          "position": 371,
+          "context": "\u2022 The 7 - day incidence among people aged 60 - 79 years is currently 60 and of people aged \u2265 80 years , 136 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DURATION",
+          "value": null,
+          "mention": "80 years",
+          "position": 377,
+          "context": "\u2022 The 7 - day incidence among people aged 60 - 79 years is currently 60 and of people aged \u2265 80 years , 136 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "136",
+          "position": 380,
+          "context": "\u2022 The 7 - day incidence among people aged 60 - 79 years is currently 60 and of people aged \u2265 80 years , 136 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "100,000",
+          "position": 383,
+          "context": "\u2022 The 7 - day incidence among people aged 60 - 79 years is currently 60 and of people aged \u2265 80 years , 136 cases / 100,000 population .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "06/02/2021",
+          "position": 482,
+          "context": "\u2022 On 06/02/2021 ( 12:15 PM ) 3,965 COVID - 19 patients were in intensive care .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "TIME",
+          "value": null,
+          "mention": "12:15 PM",
+          "position": 484,
+          "context": "\u2022 On 06/02/2021 ( 12:15 PM ) 3,965 COVID - 19 patients were in intensive care .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "3,965",
+          "position": 487,
+          "context": "\u2022 On 06/02/2021 ( 12:15 PM ) 3,965 COVID - 19 patients were in intensive care .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DURATION",
+          "value": null,
+          "mention": "24 hours",
+          "position": 517,
+          "context": "In the preceding 24 hours , +416 existing patients had been discharged ( 31 % of whom had died ) and +309 patients were newly admitted .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "+416",
+          "position": 520,
+          "context": "In the preceding 24 hours , +416 existing patients had been discharged ( 31 % of whom had died ) and +309 patients were newly admitted .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "PERCENT",
+          "value": null,
+          "mention": "31%",
+          "position": 527,
+          "context": "In the preceding 24 hours , +416 existing patients had been discharged ( 31 % of whom had died ) and +309 patients were newly admitted .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "+309",
+          "position": 535,
+          "context": "In the preceding 24 hours , +416 existing patients had been discharged ( 31 % of whom had died ) and +309 patients were newly admitted .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "-107",
+          "position": 576,
+          "context": "The resulting number of cases under treatment was -107 more than the prior day .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "the prior day",
+          "position": 579,
+          "context": "The resulting number of cases under treatment was -107 more than the prior day .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "26/12/2020",
+          "position": 600,
+          "context": "\u2022 Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once ( vaccination rate 2.7 % ) and 903,271 people twice ( vaccination rate 1.1 % ) against COVID - 19 ( http://www.rki.de/covid-19-impfquoten ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "2,212,851",
+          "position": 604,
+          "context": "\u2022 Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once ( vaccination rate 2.7 % ) and 903,271 people twice ( vaccination rate 1.1 % ) against COVID - 19 ( http://www.rki.de/covid-19-impfquoten ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "COUNTRY",
+          "value": null,
+          "mention": "Germany",
+          "position": 607,
+          "context": "\u2022 Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once ( vaccination rate 2.7 % ) and 903,271 people twice ( vaccination rate 1.1 % ) against COVID - 19 ( http://www.rki.de/covid-19-impfquoten ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "once",
+          "position": 613,
+          "context": "\u2022 Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once ( vaccination rate 2.7 % ) and 903,271 people twice ( vaccination rate 1.1 % ) against COVID - 19 ( http://www.rki.de/covid-19-impfquoten ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "PERCENT",
+          "value": null,
+          "mention": "2.7%",
+          "position": 617,
+          "context": "\u2022 Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once ( vaccination rate 2.7 % ) and 903,271 people twice ( vaccination rate 1.1 % ) against COVID - 19 ( http://www.rki.de/covid-19-impfquoten ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "903,271",
+          "position": 621,
+          "context": "\u2022 Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once ( vaccination rate 2.7 % ) and 903,271 people twice ( vaccination rate 1.1 % ) against COVID - 19 ( http://www.rki.de/covid-19-impfquoten ) .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "PERCENT",
+          "value": null,
+          "mention": "1.1%",
+          "position": 627,
+          "context": "\u2022 Since 26/12/2020 a total of 2,212,851 people in Germany have been vaccinated at least once ( vaccination rate 2.7 % ) and 903,271 people twice ( vaccination rate 1.1 % ) against COVID - 19 ( http://www.rki.de/covid-19-impfquoten ) .",
+          "embedding": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,858 @@
+{
+  "text": "On February 9, 1998, about 0954 central standard time (CST), a Boeing 727-223 (727), N845AA, operated by American Airlines as flight 1340, impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport (ORD) while conducting a Category II (CAT II) instrument landing system (ILS) coupled approach. Twenty-two passengers and one flight attendant received minor injuries, and the airplane was substantially damaged. The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri. Daylight instrument meteorological conditions prevailed at the time of the accident.",
+  "report_number": "AAB-01-01",
+  "mentions": {
+    "event_date": [
+      {
+        "mention": "February 9, 1998",
+        "start": 3,
+        "length": 16
+      }
+    ],
+    "location_city": [
+      {
+        "mention": "Chicago",
+        "start": 701,
+        "length": 7
+      }
+    ],
+    "location_state": [
+      {
+        "mention": "Illinois",
+        "start": 710,
+        "length": 8
+      }
+    ],
+    "airport_code": [
+      {
+        "mention": "ORD",
+        "start": 234,
+        "length": 3
+      }
+    ],
+    "airport_name": [
+      {
+        "mention": "Chicago O'Hare International Airport",
+        "start": 196,
+        "length": 36
+      }
+    ],
+    "aircraft_damage": [
+      {
+        "mention": "substantially damaged",
+        "start": 422,
+        "length": 21
+      }
+    ],
+    "aircraft_registration_number": [
+      {
+        "mention": "N845AA",
+        "start": 85,
+        "length": 6
+      }
+    ],
+    "aircraft_make": [
+      {
+        "mention": "Boeing",
+        "start": 63,
+        "length": 6
+      }
+    ],
+    "aircraft_model": [
+      {
+        "mention": "727-223",
+        "start": 70,
+        "length": 7
+      },
+      {
+        "mention": "727-223 (727)",
+        "start": 70,
+        "length": 13
+      },
+      {
+        "mention": "727",
+        "start": 79,
+        "length": 3
+      }
+    ],
+    "far_description": [
+      {
+        "mention": "14 Code of Federal Regulations (CFR) Part 121",
+        "start": 560,
+        "length": 45
+      },
+      {
+        "mention": "Part 121",
+        "start": 597,
+        "length": 8
+      },
+      {
+        "mention": "121",
+        "start": 602,
+        "length": 3
+      }
+    ],
+    "air_carrier": [
+      {
+        "mention": "American Airlines",
+        "start": 105,
+        "length": 17
+      },
+      {
+        "mention": "American Airlines",
+        "start": 477,
+        "length": 17
+      }
+    ],
+    "total_fatal_injuries": [],
+    "total_serious_injuries": [],
+    "total_minor_injuries": [
+      {
+        "mention": "Twenty-two passengers and one flight attendant received minor injuries",
+        "start": 329,
+        "length": 70
+      }
+    ],
+    "total_uninjured": [],
+    "weather_condition": [
+      {
+        "mention": "Daylight instrument meteorological conditions",
+        "start": 789,
+        "length": 45
+      }
+    ]
+  },
+  "mentions_diff_value": {
+    "event_date": [],
+    "location_city": [
+      {
+        "mention": "Kansas City",
+        "start": 766,
+        "length": 11
+      }
+    ],
+    "location_state": [
+      {
+        "mention": "Missouri",
+        "start": 779,
+        "length": 8
+      }
+    ],
+    "airport_code": [
+      {
+        "mention": "MCI",
+        "start": 760,
+        "length": 3
+      }
+    ],
+    "airport_name": [
+      {
+        "mention": "Kansas City International Airport",
+        "start": 725,
+        "length": 33
+      }
+    ],
+    "aircraft_damage": [],
+    "aircraft_registration_number": [],
+    "aircraft_make": [],
+    "aircraft_model": [],
+    "far_description": [],
+    "air_carrier": [],
+    "total_fatal_injuries": [],
+    "total_serious_injuries": [],
+    "total_minor_injuries": [],
+    "total_uninjured": [],
+    "weather_condition": []
+  },
+  "mention_kinds": {
+    "event_date": "mentioned",
+    "location_city": "mentioned",
+    "location_state": "mentioned",
+    "airport_code": "mentioned",
+    "airport_name": "mentioned",
+    "aircraft_damage": "mentioned",
+    "aircraft_registration_number": "mentioned",
+    "aircraft_make": "mentioned",
+    "aircraft_model": "mentioned",
+    "far_description": "mentioned",
+    "air_carrier": "mentioned",
+    "total_fatal_injuries": "not-mentioned",
+    "total_serious_injuries": "not-mentioned",
+    "total_minor_injuries": "derivable",
+    "total_uninjured": "not-mentioned",
+    "weather_condition": "mentioned"
+  },
+  "evaluation": {
+    "Stanza": {
+      "mentions": {
+        "event_date": [
+          0
+        ],
+        "location_city": [
+          19
+        ],
+        "location_state": [
+          20
+        ],
+        "airport_code": [],
+        "airport_name": [
+          9
+        ],
+        "aircraft_damage": [],
+        "aircraft_registration_number": [
+          5
+        ],
+        "aircraft_make": [
+          2
+        ],
+        "aircraft_model": [
+          3,
+          4
+        ],
+        "far_description": [
+          15
+        ],
+        "air_carrier": [
+          6,
+          12
+        ],
+        "total_fatal_injuries": [],
+        "total_serious_injuries": [],
+        "total_minor_injuries": [],
+        "total_uninjured": [],
+        "weather_condition": []
+      },
+      "mentions_diff_value": {
+        "event_date": [],
+        "location_city": [
+          21,
+          24
+        ],
+        "location_state": [
+          25
+        ],
+        "airport_code": [
+          23
+        ],
+        "airport_name": [],
+        "aircraft_damage": [],
+        "aircraft_registration_number": [],
+        "aircraft_make": [],
+        "aircraft_model": [],
+        "far_description": [],
+        "air_carrier": [],
+        "total_fatal_injuries": [],
+        "total_serious_injuries": [],
+        "total_minor_injuries": [],
+        "total_uninjured": [],
+        "weather_condition": []
+      },
+      "all_extractions": [
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanza",
+          "label": "DATE",
+          "value": null,
+          "mention": "February 9, 1998",
+          "position": 1,
+          "context": "On February 9, 1998, about 0954 central standard time (CST), a Boeing 727-223 (727), N845AA, operated by American Airlines as flight 1340, impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport (ORD) while conducting a Category II (CAT II) instrument landing system (ILS) coupled approach.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "about 0954",
+          "position": 6,
+          "context": "On February 9, 1998, about 0954 central standard time (CST), a Boeing 727-223 (727), N845AA, operated by American Airlines as flight 1340, impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport (ORD) while conducting a Category II (CAT II) instrument landing system (ILS) coupled approach.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "Boeing",
+          "position": 16,
+          "context": "On February 9, 1998, about 0954 central standard time (CST), a Boeing 727-223 (727), N845AA, operated by American Airlines as flight 1340, impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport (ORD) while conducting a Category II (CAT II) instrument landing system (ILS) coupled approach.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "PRODUCT",
+          "value": null,
+          "mention": "727-223",
+          "position": 17,
+          "context": "On February 9, 1998, about 0954 central standard time (CST), a Boeing 727-223 (727), N845AA, operated by American Airlines as flight 1340, impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport (ORD) while conducting a Category II (CAT II) instrument landing system (ILS) coupled approach.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "PRODUCT",
+          "value": null,
+          "mention": "727)",
+          "position": 19,
+          "context": "On February 9, 1998, about 0954 central standard time (CST), a Boeing 727-223 (727), N845AA, operated by American Airlines as flight 1340, impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport (ORD) while conducting a Category II (CAT II) instrument landing system (ILS) coupled approach.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "PRODUCT",
+          "value": null,
+          "mention": "N845AA",
+          "position": 22,
+          "context": "On February 9, 1998, about 0954 central standard time (CST), a Boeing 727-223 (727), N845AA, operated by American Airlines as flight 1340, impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport (ORD) while conducting a Category II (CAT II) instrument landing system (ILS) coupled approach.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "American Airlines",
+          "position": 27,
+          "context": "On February 9, 1998, about 0954 central standard time (CST), a Boeing 727-223 (727), N845AA, operated by American Airlines as flight 1340, impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport (ORD) while conducting a Category II (CAT II) instrument landing system (ILS) coupled approach.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "1340",
+          "position": 31,
+          "context": "On February 9, 1998, about 0954 central standard time (CST), a Boeing 727-223 (727), N845AA, operated by American Airlines as flight 1340, impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport (ORD) while conducting a Category II (CAT II) instrument landing system (ILS) coupled approach.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "14R",
+          "position": 40,
+          "context": "On February 9, 1998, about 0954 central standard time (CST), a Boeing 727-223 (727), N845AA, operated by American Airlines as flight 1340, impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport (ORD) while conducting a Category II (CAT II) instrument landing system (ILS) coupled approach.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "FAC",
+          "value": null,
+          "mention": "Chicago O'Hare International Airport",
+          "position": 43,
+          "context": "On February 9, 1998, about 0954 central standard time (CST), a Boeing 727-223 (727), N845AA, operated by American Airlines as flight 1340, impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport (ORD) while conducting a Category II (CAT II) instrument landing system (ILS) coupled approach.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "Twenty-two",
+          "position": 68,
+          "context": "Twenty-two passengers and one flight attendant received minor injuries, and the airplane was substantially damaged.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "one",
+          "position": 73,
+          "context": "Twenty-two passengers and one flight attendant received minor injuries, and the airplane was substantially damaged.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "American Airlines",
+          "position": 93,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "LAW",
+          "value": null,
+          "mention": "14 Code of Federal Regulations",
+          "position": 105,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "CFR",
+          "position": 111,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "121",
+          "position": 114,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "116",
+          "position": 117,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "3",
+          "position": 120,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanza",
+          "label": "CARDINAL",
+          "value": null,
+          "mention": "3",
+          "position": 125,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Chicago",
+          "position": 134,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Illinois",
+          "position": 136,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Kansas City",
+          "position": 139,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "FAC",
+          "value": null,
+          "mention": "International Airport",
+          "position": 141,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "ORG",
+          "value": null,
+          "mention": "MCI)",
+          "position": 144,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Kansas City",
+          "position": 147,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanza",
+          "label": "GPE",
+          "value": null,
+          "mention": "Missouri",
+          "position": 150,
+          "context": "The airplane, being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations (CFR) Part 121, with 116 passengers, 3 flight crewmembers, and 3 flight attendants on board, was destined for Chicago, Illinois, from Kansas City International Airport (MCI), Kansas City, Missouri.",
+          "embedding": null
+        }
+      ]
+    },
+    "Stanford-CoreNLP": {
+      "mentions": {
+        "event_date": [
+          0
+        ],
+        "location_city": [
+          6,
+          19
+        ],
+        "location_state": [
+          20
+        ],
+        "airport_code": [],
+        "airport_name": [],
+        "aircraft_damage": [],
+        "aircraft_registration_number": [],
+        "aircraft_make": [
+          2
+        ],
+        "aircraft_model": [
+          3
+        ],
+        "far_description": [
+          15
+        ],
+        "air_carrier": [
+          4,
+          13
+        ],
+        "total_fatal_injuries": [],
+        "total_serious_injuries": [],
+        "total_minor_injuries": [],
+        "total_uninjured": [],
+        "weather_condition": []
+      },
+      "mentions_diff_value": {
+        "event_date": [],
+        "location_city": [
+          23
+        ],
+        "location_state": [
+          24
+        ],
+        "airport_code": [
+          22
+        ],
+        "airport_name": [
+          21
+        ],
+        "aircraft_damage": [],
+        "aircraft_registration_number": [],
+        "aircraft_make": [],
+        "aircraft_model": [],
+        "far_description": [],
+        "air_carrier": [],
+        "total_fatal_injuries": [],
+        "total_serious_injuries": [],
+        "total_minor_injuries": [],
+        "total_uninjured": [],
+        "weather_condition": []
+      },
+      "all_extractions": [
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "February 9, 1998",
+          "position": 1,
+          "context": "On February 9 , 1998 , about 0954 central standard time ( CST ) , a Boeing 727 - 223 ( 727 ) , N845AA , operated by American Airlines as flight 1340 , impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport ( ORD ) while conducting a Category II ( CAT II ) instrument landing system ( ILS ) coupled approach .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "about 0954",
+          "position": 6,
+          "context": "On February 9 , 1998 , about 0954 central standard time ( CST ) , a Boeing 727 - 223 ( 727 ) , N845AA , operated by American Airlines as flight 1340 , impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport ( ORD ) while conducting a Category II ( CAT II ) instrument landing system ( ILS ) coupled approach .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORGANIZATION",
+          "value": null,
+          "mention": "Boeing",
+          "position": 16,
+          "context": "On February 9 , 1998 , about 0954 central standard time ( CST ) , a Boeing 727 - 223 ( 727 ) , N845AA , operated by American Airlines as flight 1340 , impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport ( ORD ) while conducting a Category II ( CAT II ) instrument landing system ( ILS ) coupled approach .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "727",
+          "position": 21,
+          "context": "On February 9 , 1998 , about 0954 central standard time ( CST ) , a Boeing 727 - 223 ( 727 ) , N845AA , operated by American Airlines as flight 1340 , impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport ( ORD ) while conducting a Category II ( CAT II ) instrument landing system ( ILS ) coupled approach .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORGANIZATION",
+          "value": null,
+          "mention": "American Airlines",
+          "position": 28,
+          "context": "On February 9 , 1998 , about 0954 central standard time ( CST ) , a Boeing 727 - 223 ( 727 ) , N845AA , operated by American Airlines as flight 1340 , impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport ( ORD ) while conducting a Category II ( CAT II ) instrument landing system ( ILS ) coupled approach .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "1340",
+          "position": 32,
+          "context": "On February 9 , 1998 , about 0954 central standard time ( CST ) , a Boeing 727 - 223 ( 727 ) , N845AA , operated by American Airlines as flight 1340 , impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport ( ORD ) while conducting a Category II ( CAT II ) instrument landing system ( ILS ) coupled approach .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CITY",
+          "value": null,
+          "mention": "Chicago",
+          "position": 44,
+          "context": "On February 9 , 1998 , about 0954 central standard time ( CST ) , a Boeing 727 - 223 ( 727 ) , N845AA , operated by American Airlines as flight 1340 , impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport ( ORD ) while conducting a Category II ( CAT II ) instrument landing system ( ILS ) coupled approach .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "LOCATION",
+          "value": null,
+          "mention": "O'Hare International Airport",
+          "position": 45,
+          "context": "On February 9 , 1998 , about 0954 central standard time ( CST ) , a Boeing 727 - 223 ( 727 ) , N845AA , operated by American Airlines as flight 1340 , impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport ( ORD ) while conducting a Category II ( CAT II ) instrument landing system ( ILS ) coupled approach .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "II",
+          "position": 55,
+          "context": "On February 9 , 1998 , about 0954 central standard time ( CST ) , a Boeing 727 - 223 ( 727 ) , N845AA , operated by American Airlines as flight 1340 , impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport ( ORD ) while conducting a Category II ( CAT II ) instrument landing system ( ILS ) coupled approach .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "II",
+          "position": 58,
+          "context": "On February 9 , 1998 , about 0954 central standard time ( CST ) , a Boeing 727 - 223 ( 727 ) , N845AA , operated by American Airlines as flight 1340 , impacted the ground short of the runway 14R threshold at Chicago O'Hare International Airport ( ORD ) while conducting a Category II ( CAT II ) instrument landing system ( ILS ) coupled approach .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "Twenty-two",
+          "position": 138,
+          "context": "Twenty - two passengers and one flight attendant received minor injuries , and the airplane was substantially damaged .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "one",
+          "position": 143,
+          "context": "Twenty - two passengers and one flight attendant received minor injuries , and the airplane was substantially damaged .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "TITLE",
+          "value": null,
+          "mention": "flight attendant",
+          "position": 144,
+          "context": "Twenty - two passengers and one flight attendant received minor injuries , and the airplane was substantially damaged .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORGANIZATION",
+          "value": null,
+          "mention": "American Airlines",
+          "position": 182,
+          "context": "The airplane , being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations ( CFR ) Part 121 , with 116 passengers , 3 flight crewmembers , and 3 flight attendants on board , was destined for Chicago , Illinois , from Kansas City International Airport ( MCI ) , Kansas City , Missouri .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "14",
+          "position": 194,
+          "context": "The airplane , being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations ( CFR ) Part 121 , with 116 passengers , 3 flight crewmembers , and 3 flight attendants on board , was destined for Chicago , Illinois , from Kansas City International Airport ( MCI ) , Kansas City , Missouri .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "121",
+          "position": 203,
+          "context": "The airplane , being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations ( CFR ) Part 121 , with 116 passengers , 3 flight crewmembers , and 3 flight attendants on board , was destined for Chicago , Illinois , from Kansas City International Airport ( MCI ) , Kansas City , Missouri .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "116",
+          "position": 206,
+          "context": "The airplane , being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations ( CFR ) Part 121 , with 116 passengers , 3 flight crewmembers , and 3 flight attendants on board , was destined for Chicago , Illinois , from Kansas City International Airport ( MCI ) , Kansas City , Missouri .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "3",
+          "position": 209,
+          "context": "The airplane , being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations ( CFR ) Part 121 , with 116 passengers , 3 flight crewmembers , and 3 flight attendants on board , was destined for Chicago , Illinois , from Kansas City International Airport ( MCI ) , Kansas City , Missouri .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "NUMBER",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "NUMBER",
+          "value": null,
+          "mention": "3",
+          "position": 214,
+          "context": "The airplane , being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations ( CFR ) Part 121 , with 116 passengers , 3 flight crewmembers , and 3 flight attendants on board , was destined for Chicago , Illinois , from Kansas City International Airport ( MCI ) , Kansas City , Missouri .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CITY",
+          "value": null,
+          "mention": "Chicago",
+          "position": 223,
+          "context": "The airplane , being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations ( CFR ) Part 121 , with 116 passengers , 3 flight crewmembers , and 3 flight attendants on board , was destined for Chicago , Illinois , from Kansas City International Airport ( MCI ) , Kansas City , Missouri .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "STATE_OR_PROVINCE",
+          "value": null,
+          "mention": "Illinois",
+          "position": 225,
+          "context": "The airplane , being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations ( CFR ) Part 121 , with 116 passengers , 3 flight crewmembers , and 3 flight attendants on board , was destined for Chicago , Illinois , from Kansas City International Airport ( MCI ) , Kansas City , Missouri .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORGANIZATION",
+          "value": null,
+          "mention": "Kansas City International Airport",
+          "position": 228,
+          "context": "The airplane , being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations ( CFR ) Part 121 , with 116 passengers , 3 flight crewmembers , and 3 flight attendants on board , was destined for Chicago , Illinois , from Kansas City International Airport ( MCI ) , Kansas City , Missouri .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "ORGANIZATION",
+          "value": null,
+          "mention": "MCI",
+          "position": 233,
+          "context": "The airplane , being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations ( CFR ) Part 121 , with 116 passengers , 3 flight crewmembers , and 3 flight attendants on board , was destined for Chicago , Illinois , from Kansas City International Airport ( MCI ) , Kansas City , Missouri .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CITY",
+          "value": null,
+          "mention": "Kansas City",
+          "position": 236,
+          "context": "The airplane , being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations ( CFR ) Part 121 , with 116 passengers , 3 flight crewmembers , and 3 flight attendants on board , was destined for Chicago , Illinois , from Kansas City International Airport ( MCI ) , Kansas City , Missouri .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "STATE_OR_PROVINCE",
+          "value": null,
+          "mention": "Missouri",
+          "position": 239,
+          "context": "The airplane , being operated by American Airlines as a scheduled domestic passenger flight under the provisions of 14 Code of Federal Regulations ( CFR ) Part 121 , with 116 passengers , 3 flight crewmembers , and 3 flight attendants on board , was destined for Chicago , Illinois , from Kansas City International Airport ( MCI ) , Kansas City , Missouri .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "TIME",
+          "value": null,
+          "mention": "Daylight",
+          "position": 306,
+          "context": "Daylight instrument meteorological conditions prevailed at the time of the accident .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "DATETIME",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "DATE",
+          "value": null,
+          "mention": "time",
+          "position": 313,
+          "context": "Daylight instrument meteorological conditions prevailed at the time of the accident .",
+          "embedding": null
+        },
+        {
+          "extraction_type_str": "STRING",
+          "extractor_str": "Stanford-CoreNLP",
+          "label": "CAUSE_OF_DEATH",
+          "value": null,
+          "mention": "accident",
+          "position": 316,
+          "context": "Daylight instrument meteorological conditions prevailed at the time of the accident .",
+          "embedding": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+Summary (as of 08/12/2020, 12:00 AM)
+• Currently, the number of transmissions in the population in Germany is high. Therefore, the entire population is strongly
+encouraged to commit itself to infection prevention and control.
+• Since 04/12/2020, the case numbers are slightly increasing.
+• The national 7-day incidence is 147 cases per 100,000 population. In Saxony it is markedly above, in Bavaria, Berlin and
+Thuringia moderately above and in Baden-Württemberg and Hesse marginally above the national average.
+• Since the beginning of September, the proportion of cases in older age groups has been increasing again. The 7-day
+incidence of people ≥ 60 years is currently 134 cases/100,000 population.
+• Almost all of the 412 districts have a high 7-day COVID-19 incidence. Only 8 districts transmitted an incidence of ≤25
+cases/100,000 population. In comparison, 297 districts have an incidence of >100 cases/100,000 population and of these,
+28 districts have an incidence of >250-500 cases/100,000 population and 3 districts of >500 cases/100,000 population.
+• The high nationwide number of cases is caused by increasingly diffuse transmission, with numerous clusters especially in
+households and nursing and long-term care homes, but also in occupational settings, community facilities and related to
+religious events. For a large proportion of cases the transmission setting remains unclear.
+• With 4,257 cases, the current number of COVID-19 cases treated in intensive care continues to increase (3,742 cases on
+23/11/2020).
+• On 07/12/2020, 14,054 new laboratory-confirmed COVID-19 cases and 423 new deaths associated with COVID-19 have
+been transmitted to the RKI in Germany. 

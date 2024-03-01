@@ -1,0 +1,17 @@
+Summary (as of 03/02/2021, 12:00 AM)
+• Currently, the number of transmissions in the population in Germany remains high. RKI assesses the level of threat to the
+health of the general population to be very high.
+• Yesterday, 9,705 new laboratory-confirmed COVID-19 cases as well as 975 new deaths associated with COVID-19 were
+transmitted to the RKI. The national 7-day incidence is 83 cases per 100,000 population. In Brandenburg, Saarland, Saxony,
+Saxony-Anhalt, and Thuringia it is markedly above the national incidence.
+• In 350 of the 412 districts, the 7-day COVID-19 incidence is high. In 122 districts, the 7-day incidence is >100 cases/100,000
+population and in 5 of these districts it is >250-500 cases/100,000 population.
+• The 7-day incidence among people aged 60-79 years is currently 66 and of people aged ≥80 years, 156 cases/100,000
+population.
+• The high nationwide number of cases is caused by increasingly diffuse transmission, with numerous clusters especially in
+households, occupational settings and nursing and long-term care homes.
+• On 03/02/2021 (12:15 PM) 4,222 COVID-19 patients were in intensive care. In the preceding 24 hours, +593 existing patients had
+been discharged (31 % of whom had died) and +551 patients were newly admitted. The resulting number of cases under
+treatment was 42 less than the prior day.
+• Since 26/12/2020 a total of 2,033,561 people in Germany have been vaccinated at least once (vaccination rate 2.4%) and
+679,649 people twice against COVID-19 (http://www.rki.de/covid-19-impfquoten).

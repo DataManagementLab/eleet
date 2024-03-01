@@ -1,0 +1,25 @@
+INFO 2024-03-01 20:19:30,904 eleet_pretrain.steps: Running step DownloadTRExStep
+INFO 2024-03-01 20:19:30,904 eleet_pretrain.datasets.pretraining.data_import.download: Downloading TREx dataset into /home/murban/Documents/Repos/multimodal-db/eleet_pretrain/datasets/TREx
+ERROR 2024-03-01 20:19:42,391 eleet_pretrain.utils: Unhandled exception occurred. Cannot recover.
+Traceback (most recent call last):
+  File "/home/murban/Documents/Repos/multimodal-db/eleet_pretrain/steps.py", line 57, in func
+    step.run(args, **kwargs)
+  File "/home/murban/Documents/Repos/multimodal-db/eleet_pretrain/datasets/pretraining/data_import/download.py", line 55, in run
+    raise e
+  File "/home/murban/Documents/Repos/multimodal-db/eleet_pretrain/datasets/pretraining/data_import/download.py", line 52, in run
+    wget.download(self.url if not args.small_sample else self.sample_url, str(target_dir))
+  File "/home/murban/miniconda3/envs/eleet/lib/python3.8/site-packages/wget.py", line 526, in download
+    (tmpfile, headers) = ulib.urlretrieve(binurl, tmpfile, callback)
+  File "/home/murban/miniconda3/envs/eleet/lib/python3.8/urllib/request.py", line 276, in urlretrieve
+    block = fp.read(bs)
+  File "/home/murban/miniconda3/envs/eleet/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/home/murban/miniconda3/envs/eleet/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/home/murban/miniconda3/envs/eleet/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/home/murban/miniconda3/envs/eleet/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/home/murban/miniconda3/envs/eleet/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt
