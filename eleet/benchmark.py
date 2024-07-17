@@ -2,6 +2,7 @@ import sys
 
 from openai import OpenAI
 
+from eleet.datasets.diagnoses.generate import load_diagnoses
 from eleet.methods.openai.engine import LLM_COST
 sys.path = [x for x in sys.path if not x.endswith("eleet")]
 
@@ -37,6 +38,7 @@ LIMIT = 2 ** 32
 OPENAI_METHODS = tuple(LLM_COST.keys())
 METHODS = (
     "eleet",
+    "eleet-no-vertical",
     "t2t",
     "llama",
     "bert",
@@ -50,10 +52,12 @@ DATASETS = (
     "trex",
     "aviation",
     "corona",
+    "diagnoses",
 )
 
 MODELS = {
     "eleet": "models/{dataset}/ours/finetuned/current/{split_size}/pytorch_model.bin",
+    "eleet-no-vertical": "models/{dataset}/ours/finetuned/no-vertical/{split_size}/pytorch_model.bin",
     "bert": "models/{dataset}/ours/finetuned/bert/{split_size}/pytorch_model.bin",
     "tabert": "models/{dataset}/ours/finetuned/tabert/{split_size}/pytorch_model.bin",
     "t2t": "models/{dataset}/text_to_table/current/checkpoints.{^split_size}/checkpoint_average_best-3.pt",
@@ -367,26 +371,6 @@ def get_trex_queries(test, limit):
         "nobel_reports.Career",
     ], limit=limit)
 
-    union_countries_geography = MMUnion(operands=[
-        "countries-Geography-union",
-        "countries_reports.Geography",
-    ], limit=limit)
-
-    union_countries_politics = MMUnion(operands=[
-        "countries-Politics-union",
-        "countries_reports.Politics",
-    ], limit=limit)
-
-    union_skyscrapers_location = MMUnion(operands=[
-        "skyscrapers-Location-union",
-        "skyscrapers_reports.Location",
-    ], limit=limit)
-
-    union_skyscrapers_history = MMUnion(operands=[
-        "skyscrapers-History-union",
-        "skyscrapers_reports.History",
-    ], limit=limit)
-
     # Join
     join_nobel_personal = MMJoin(operands=[
         "nobel-Career-join",
@@ -398,26 +382,6 @@ def get_trex_queries(test, limit):
         "nobel_reports.Career",
     ], join_key="index", limit=limit)
 
-    join_countries_geography = MMJoin(operands=[
-        "countries-Politics-join",
-        "countries_reports.Geography",
-    ], join_key="index", limit=limit)
-
-    join_countries_politics = MMJoin(operands=[
-        "countries-Geography-join",
-        "countries_reports.Politics",
-    ], join_key="index", limit=limit)
-
-    join_skyscrapers_location = MMJoin(operands=[
-        "skyscrapers-History-join",
-        "skyscrapers_reports.Location",
-    ], join_key="index", limit=limit)
-
-    join_skyscrapers_history = MMJoin(operands=[
-        "skyscrapers-Location-join",
-        "skyscrapers_reports.History",
-    ], join_key="index", limit=limit)
-
     # Scan
     scan_nobel_personal = MMScan(operands=[
         "nobel_reports.Personal",
@@ -425,22 +389,6 @@ def get_trex_queries(test, limit):
 
     scan_nobel_career = MMScan(operands=[
         "nobel_reports.Career",
-    ], limit=limit)
-
-    scan_countries_geography = MMScan(operands=[
-        "countries_reports.Geography",
-    ], limit=limit)
-
-    scan_countries_politics = MMScan(operands=[
-        "countries_reports.Politics",
-    ], limit=limit)
-
-    scan_skyscrapers_location = MMScan(operands=[
-        "skyscrapers_reports.Location",
-    ], limit=limit)
-
-    scan_skyscrapers_history = MMScan(operands=[
-        "skyscrapers_reports.History",
     ], limit=limit)
 
     # Projection
@@ -456,44 +404,15 @@ def get_trex_queries(test, limit):
         "nobel_reports.Career",
     ], limit=limit)
 
-    PROJECT_ATTRS_COUNTRIES_GEOGRAPHY = ['index', 'name', 'capital', 'continent']
-    union_countries_geography_project = MMUnion(operands=[
-        Projection(operands=["countries-Geography-union"], project_columns=PROJECT_ATTRS_COUNTRIES_GEOGRAPHY),
-        "countries_reports.Geography",
-    ], limit=limit)
-
-    PROJECT_ATTRS_COUNTRIES_POLITICS = ['index', 'name', 'inception', 'head of government']
-    union_countries_politics_project = MMUnion(operands=[
-        Projection(operands=["countries-Politics-union"], project_columns=PROJECT_ATTRS_COUNTRIES_POLITICS),
-        "countries_reports.Politics",
-    ], limit=limit)
-
-    PROJECT_ATTRS_SKYSCRAPERS_LOCATION = ['index', 'name', 'architect', 'country', 'located on street']
-    union_skyscrapers_location_project = MMUnion(operands=[
-        Projection(operands=["skyscrapers-Location-union"], project_columns=PROJECT_ATTRS_SKYSCRAPERS_LOCATION),
-        "skyscrapers_reports.Location",
-    ], limit=limit)
-
-    PROJECT_ATTRS_SKYSCRAPERS_HISTORY = ['index', 'name', 'inception', 'date of official opening']
-    union_skyscrapers_history_project = MMUnion(operands=[
-        Projection(operands=["skyscrapers-History-union"], project_columns=PROJECT_ATTRS_SKYSCRAPERS_HISTORY),
-        "skyscrapers_reports.History",
-    ], limit=limit)
-
     # Selection
     union_nobel_personal_selection = MMUnion(operands=[
         "nobel-Personal-union",
         MMSelection(operands=["nobel_reports.Personal"], limit=limit, selectivity=0.8, attribute="country of citizenship"),
     ], limit=limit)
 
-    union_countries_geography_selection = MMUnion(operands=[
-        "countries-Geography-union",
-        MMSelection(operands=["countries_reports.Geography"], limit=limit, selectivity=0.5, attribute="continent"),
-    ], limit=limit)
-
-    union_countries_politics_selection = MMUnion(operands=[
-        "countries-Politics-union",
-        MMSelection(operands=["countries_reports.Politics"], limit=limit, selectivity=0.5, attribute="basic form of government"),
+    union_nobel_personal_selection2 = MMUnion(operands=[
+        "nobel-Personal-union",
+        MMSelection(operands=["nobel_reports.Personal"], limit=limit, selectivity=0.3, attribute="country of citizenship"),
     ], limit=limit)
 
     # Aggregation
@@ -505,13 +424,6 @@ def get_trex_queries(test, limit):
         "nobel_reports.Career",
     ], limit=limit)], attribute="field of work")
 
-    scan_countries_geography_aggregation = MMAggregation(operands=[MMScan(operands=[
-        "countries_reports.Geography",
-    ], limit=limit)], attribute="continent")
-
-    scan_countries_politics_aggregation = MMAggregation(operands=[MMScan(operands=[
-        "countries_reports.Politics",
-    ], limit=limit)], attribute="basic form of government")
 
     def get_relevant_cols_ids(a, b, project_attrs=None):
         if project_attrs is None:
@@ -524,44 +436,25 @@ def get_trex_queries(test, limit):
     return db, db_train, (
         Query(union_nobel_personal, "index", *get_relevant_cols_ids("nobel", "Personal"), None, False),
         Query(union_nobel_career, "index", *get_relevant_cols_ids("nobel", "Career"), None, False),
-        # too noisy
-        # Query(union_countries_geography, "index", *get_relevant_cols_ids("countries", "Geography"), None, False),
-        # Query(union_countries_politics, "index", *get_relevant_cols_ids("countries", "Politics"), None, False),
-        # Query(union_skyscrapers_history, "index", *get_relevant_cols_ids("skyscrapers", "History"), None, False),
-        # Query(union_skyscrapers_location, "index", *get_relevant_cols_ids("skyscrapers", "Location"), None, False),
 
         Query(join_nobel_personal, "index", *get_relevant_cols_ids("nobel", "Personal"), None, False),
         Query(join_nobel_career, "index", *get_relevant_cols_ids("nobel", "Career"), None, False),
-        # Query(join_countries_geography, "index", *get_relevant_cols_ids("countries", "Geography"), None, False),
-        # Query(join_countries_politics, "index", *get_relevant_cols_ids("countries", "Politics"), None, False),
-        # Query(join_skyscrapers_history, "index", *get_relevant_cols_ids("skyscrapers", "History"), None, False),
-        # Query(join_skyscrapers_location, "index", *get_relevant_cols_ids("skyscrapers", "Location"), None, False),
 
         Query(scan_nobel_personal, "index", *get_relevant_cols_ids("nobel", "Personal"), None, False),
         Query(scan_nobel_career, "index", *get_relevant_cols_ids("nobel", "Career"), None, False),
-        # Query(scan_countries_geography, "index", *get_relevant_cols_ids("countries", "Geography"), None, False),
-        # Query(scan_countries_politics, "index", *get_relevant_cols_ids("countries", "Politics"), None, False),
-        # Query(scan_skyscrapers_history, "index", *get_relevant_cols_ids("skyscrapers", "History"), None, False),
-        # Query(scan_skyscrapers_location, "index", *get_relevant_cols_ids("skyscrapers", "Location"), None, False),
 
         Query(union_nobel_personal_selection, "index", *get_relevant_cols_ids("nobel", "Personal"), None, False),
-        # Query(union_countries_geography_selection, "index", *get_relevant_cols_ids("countries", "Geography"), None, False),
-        # Query(union_countries_politics_selection, "index", *get_relevant_cols_ids("countries", "Politics"), None, False),
+        Query(union_nobel_personal_selection2, "index", *get_relevant_cols_ids("nobel", "Personal"), None, False),
 
         Query(union_nobel_personal_project, "index", *get_relevant_cols_ids("nobel", "Personal", PROJECT_ATTRS_NOBEL_PERSONAL), None, False),
         Query(union_nobel_career_project, "index", *get_relevant_cols_ids("nobel", "Career", PROJECT_ATTRS_NOBEL_CAREER), None, False),
-        # Query(union_countries_geography_project, "index", *get_relevant_cols_ids("countries", "Geography", PROJECT_ATTRS_COUNTRIES_GEOGRAPHY), None, False),
-        # Query(union_countries_politics_project, "index", *get_relevant_cols_ids("countries", "Politics", PROJECT_ATTRS_COUNTRIES_POLITICS), None, False),
-        # Query(union_skyscrapers_history_project, "index", *get_relevant_cols_ids("skyscrapers", "History", PROJECT_ATTRS_SKYSCRAPERS_HISTORY), None, False),
-        # Query(union_skyscrapers_location_project, "index", *get_relevant_cols_ids("skyscrapers", "Location", PROJECT_ATTRS_SKYSCRAPERS_LOCATION), None, False),
 
         Query(scan_nobel_personal_aggregation, "index", *get_relevant_cols_ids("nobel", "Personal"), None, False),
         Query(scan_nobel_career_aggregation, "index", *get_relevant_cols_ids("nobel", "Career"), None, False),
-        # Query(scan_countries_geography_aggregation, "index", *get_relevant_cols_ids("countries", "Geography"), None, False),
-        # Query(scan_countries_politics_aggregation, "index", *get_relevant_cols_ids("countries", "Politics"), None, False),
     )
 
 def get_corona_queries(test, limit):  # type: ignore
+    assert test
     db_train = load_corona(Path(__file__).parents[1] / "datasets" / "corona", "train")
     db = load_corona(Path(__file__).parents[1] / "datasets" / "corona", "test")
 
@@ -601,6 +494,7 @@ def get_corona_queries(test, limit):  # type: ignore
     )
 
 def get_aviation_queries(test, limit):
+    assert test
     db_train = load_aviation(Path(__file__).parents[1] / "datasets" / "aviation", "train")
     db = load_aviation(Path(__file__).parents[1] / "datasets" / "aviation", "test")
 
@@ -697,19 +591,40 @@ def get_aviation_queries(test, limit):
     )
 
 
+def get_diagnoses_queries(test, limit):
+    assert test
+    db_train = load_diagnoses(Path(__file__).parents[1] / "datasets" / "diagnoses", "train")
+    db_valid = load_diagnoses(Path(__file__).parents[1] / "datasets" / "diagnoses", "test")
+    union_health = MMUnion(operands=["health_issues", "reports.health_issues_new"], limit=limit)
+    union_computer = MMUnion(operands=["computer_problems", "reports.computer_problems_new"], limit=limit)
+
+    RELEVANT_ATTRS_HEALTH = db_valid.texts["reports"].text_tables["health_issues_new"].attributes
+    RELEVANT_IDS_HEALTH = db_valid.texts["reports"].text_tables["health_issues_new"].data.index
+    RELEVANT_ATTRS_COMPUTER = db_valid.texts["reports"].text_tables["computer_problems_new"].attributes
+    RELEVANT_IDS_COMPUTER = db_valid.texts["reports"].text_tables["computer_problems_new"].data.index
+
+    return db_valid, db_train, (
+        Query(union_health, "report_number", RELEVANT_ATTRS_HEALTH, RELEVANT_IDS_HEALTH, "name", False),
+        Query(union_computer, "report_number", RELEVANT_ATTRS_COMPUTER, RELEVANT_IDS_COMPUTER, "name", False),
+    )
+
+
 def get_methods(db, methods, db_train, allowed_split_sizes, store_dir):
 
     # ELEET #############################################################################################################
+    method_strs = methods
+    methods = set(m.split(":")[0] for m in methods)
 
-    for x in ("eleet", "bert", "tabert"):
+    for x in ("eleet", "bert", "tabert", "eleet-no-vertical"):
         if x in methods:
             from eleet_pretrain.model.config import VerticalEleetConfig
-            from eleet.methods.eleet.engine import ELEETEngine
-            from eleet.methods.eleet.preprocessor import ELEETPreprocessor
+            from eleet.methods.multi_modal_db.engine import ELEETEngine
+            from eleet.methods.multi_modal_db.preprocessor import ELEETPreprocessor
             from transformers import BertTokenizerFast
 
             for finetune_split_size in get_available_split_sizes(x, db.name, allowed_split_sizes):
-                config = VerticalEleetConfig(max_num_cols=20)
+                additional_configs = {} if x != "eleet-no-vertical" else {"disable_vertical_transform": True}
+                config = VerticalEleetConfig(max_num_cols=20, **additional_configs)
                 tokenizer = BertTokenizerFast.from_pretrained(config.base_model_name)
                 preprocessor = ELEETPreprocessor(config=config, tokenizer=tokenizer)
                 engine = ELEETEngine(
@@ -728,22 +643,30 @@ def get_methods(db, methods, db_train, allowed_split_sizes, store_dir):
         for finetune_split_size in get_available_split_sizes("t2t", db.name, allowed_split_sizes):
             preprocessor = T2TPreprocessor(encoder_json=Path("datasets") / "rotowire" / "data" / "encoder.json",
                                            vocab_bpe=Path("datasets") / "rotowire" / "data" / "vocab.bpe")
-            engine = T2TEngine(model_path=get_model_path("t2t", db.name, finetune_split_size),
+            engine = T2TEngine(model_path=get_model_path("t2t", db.name, finetune_split_size),  # type: ignore
                                cache_dir=store_dir / "cache")
             yield preprocessor, engine, finetune_split_size
             del engine
 
     # GPT ##############################################################################################################
 
-    for method in set(OPENAI_METHODS) & set(methods):
+    for method_str in method_strs:
+        method = method_str.split(":")[0]
+        if method not in (set(OPENAI_METHODS) & methods):
+            continue
+
         from eleet.methods.openai.engine import OpenAIEngine
         from eleet.methods.llama.preprocessor import LLMPreprocessor
 
+        try:
+            llm_batch_size = int(method_str.split(":")[1])
+        except IndexError:
+            llm_batch_size = 1
 
         for finetune_split_size in get_available_split_sizes(method, db.name, allowed_split_sizes):
             preprocessor = LLMPreprocessor(train_db=db_train, num_samples=finetune_split_size,
-                                           finetune_split_size=finetune_split_size)
-            engine = OpenAIEngine(llm=method, cache_dir=store_dir / "cache")
+                                           finetune_split_size=finetune_split_size, llm_batch_size=llm_batch_size)
+            engine = OpenAIEngine(llm=method, cache_dir=store_dir / "cache", llm_batch_size=llm_batch_size)
             # engine.enable_caching()
             yield preprocessor, engine, finetune_split_size
             del engine
@@ -796,6 +719,16 @@ def get_methods(db, methods, db_train, allowed_split_sizes, store_dir):
             del engine
 
 
+def print_queries(datasets, limit, only_flagged, skip_flagged, **_):
+    print("\\begin{enumerate}")
+    for db, _, query in get_queries(datasets=datasets, test=True, limit=limit):
+        if only_flagged and not query.all_split_sizes:
+            continue
+        if skip_flagged and query.all_split_sizes:
+            continue
+        print(query.plan.latex(db))
+    print("\\end{enumerate}")
+
 def run_benchmark(datasets, methods, store_dir, execute, force_execute, split_sizes, test, limit, only_flagged,
                   skip_flagged, cost_estimation):
     collected_results = dict()
@@ -813,6 +746,7 @@ def run_benchmark(datasets, methods, store_dir, execute, force_execute, split_si
             continue
 
         labels = db.execute_query(query_plan=query.plan, preprocessor=label_preprocessor, engine=label_engine)
+        text_metadata = db.get_text_metadata(query.plan)
 
         for preprocessor, engine, finetune_split_size in get_methods(methods=methods, db=db, db_train=db_train,
                                                                      allowed_split_sizes=split_sizes,
@@ -847,7 +781,8 @@ def run_benchmark(datasets, methods, store_dir, execute, force_execute, split_si
                         relevant_columns=query.relevant_columns,
                         relevant_ids=query.relevant_ids,
                         identifying_attribute=query.identifying_attribute,
-                        runtime=runtime, index_build_time=index_build_time
+                        runtime=runtime, index_build_time=index_build_time,
+                        metadata=text_metadata
                     )}
                 )
 
@@ -905,8 +840,10 @@ def run_slurm(args,
                   *(["--skip-flagged"] if args.skip_flagged else []),
                   *(["--cost-estimation"] if args.cost_estimation else [])]
 
+
     port_offset = 0
-    for method in args.methods:
+    for method_str in args.methods:
+        method = method_str.split(":")[0]
         suffix = ""
         if method in special_run_scripts:
             suffix += f"-{method}"
@@ -934,10 +871,10 @@ def run_slurm(args,
                            for c in run_command]
             port_offset += 1
             sbatch_args = ["sbatch", run_script, *this_run_command, "eleet/benchmark.py",
-                            "--methods", method,
-                            "--datasets", *args.datasets,
-                            "--split-sizes", *map(str, args.split_sizes),
-                            *fixed_args]
+                           "--methods", method_str,
+                           "--datasets", *args.datasets,
+                           "--split-sizes", *map(str, args.split_sizes),
+                           *fixed_args]
             print(sbatch_args)
             subprocess.run(sbatch_args)
         else:
@@ -947,7 +884,7 @@ def run_slurm(args,
                                    for c in run_command]
                     port_offset += 1
                     sbatch_args = ["sbatch", run_script, *this_run_command, "eleet/benchmark.py",
-                                    "--methods", method,
+                                    "--methods", method_str,
                                     "--datasets", dataset,
                                     "--split-sizes", split_size,
                                     *fixed_args]
@@ -958,8 +895,8 @@ def run_slurm(args,
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--slurm-mode", action="store_true")
-    parser.add_argument("--methods", nargs="+", default=("eleet",), choices=METHODS,
-                        help="methods to benchmark")
+    parser.add_argument("--methods", nargs="+", default=("eleet",),
+                        help=f"methods to benchmark. Choose from {METHODS}.")
     parser.add_argument("--datasets", nargs="+", default=DATASETS, choices=DATASETS,
                         help="datasets to run benchmark on")
     parser.add_argument("--store-dir", type=Path, default=STORE_DIR, help="where to store predictions")
@@ -980,12 +917,16 @@ if __name__ == "__main__":
     parser.add_argument("--port", type=int, default=0,
                         help="Specify the port for distrubuted inference (e.g. accelerate or torchrun)."
                         "Only applies to slurm mode.")
+    parser.add_argument("--print-queries", action="store_true",
+                        help="Print the queries that will be executed")
     args = parser.parse_args()
 
-    if (args.split_sizes == ["all"] or len(args.split_sizes) > 1) and not args.only_flagged:
+    if (args.split_sizes == ["all"] or len(args.split_sizes) > 1) and not args.only_flagged and not args.print_queries:
         raise ValueError("Are you sure you want to run ALL queries on multiple split sizes? Consider --only-flagged.")
     if args.skip_flagged and args.only_flagged:
         raise ValueError("You cannot set --skip-flagged and --only-flagged at the same time.")
+
+    assert all(x.split(":")[0] in METHODS for x in args.methods), f"Methods must be one of {METHODS}"
 
     if args.slurm_mode:
         run_slurm(args)
@@ -997,4 +938,8 @@ if __name__ == "__main__":
                   test=args.test, limit=args.limit, only_flagged=args.only_flagged, skip_flagged=args.skip_flagged,
                   cost_estimation=args.cost_estimation)
     print(kwargs)
-    run_benchmark(**kwargs)
+    if args.print_queries:
+        print_queries(**kwargs)
+    else:
+        run_benchmark(**kwargs)
+

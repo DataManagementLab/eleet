@@ -74,7 +74,7 @@ class ELEETPreprocessor(BasePreprocessor):
                                   min(i + num_attrs_per_pass + identify_attr_offset, num_query_cols))
                 yield col_slice
         else:
-            order = np.arange(num_cols)
+            order = np.arange(num_cols) + identify_attr_offset
             self.rng.shuffle(order)
             num_selected_cols = self.rng.integers(2, self.max_query_columns)
             yield order[:num_selected_cols]
@@ -198,7 +198,6 @@ class ELEETPreprocessor(BasePreprocessor):
                 queried_cols=query_col_slice,
                 example_slice=example_slice,
                 identifying_attribute_in_table=identifying_attribute_in_table)
-            
             answers = header_queries = None
 
             if alignments is not None and normed is not None:

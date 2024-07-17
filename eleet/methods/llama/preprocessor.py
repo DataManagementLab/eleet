@@ -1,3 +1,4 @@
+import math
 from collections import namedtuple
 from contextlib import ExitStack, contextmanager
 from functools import partial
@@ -37,8 +38,15 @@ class PromptLoader():
     operations: List[Callable] = field(init=False, default=[])
     num_processes: int = field(default=1)
     num_prompts: int = field(default=2**32)
+    in_process: bool = field(default=False)
 
     def __iter__(self):
+        if self.in_process:
+            yield from self._iter_in_process()
+        else:
+            yield from self._iter_multiprocess()
+
+    def _iter_multiprocess(self):
         with TemporaryDirectory(dir=".", prefix="promptloader") as tempdir:
             num_processes = self.num_processes
             queues = [Queue(maxsize=20) for _ in range(num_processes)]
@@ -62,6 +70,9 @@ class PromptLoader():
 
             for process in processes:
                 process.join()
+
+    def _iter_in_process(self):
+        yield from self.iter_distributed(1, 0)
 
     def iter_distributed(self, num_processes, process_id):
         for prompt in self.prompts(num_processes=num_processes, process_id=process_id):
@@ -87,6 +98,7 @@ class LLMPreprocessor(BasePreprocessor):
     num_samples: int = field()
     finetune_split_size: int = field()
     rng: np.random.BitGenerator = field(init=False, default=np.random.default_rng(42))
+    llm_batch_size: int = field(default=1)
 
     @contextmanager
     def compute_model_input(self, data, report_column, report_table_name, extract_attributes, identifying_attribute,
@@ -95,7 +107,7 @@ class LLMPreprocessor(BasePreprocessor):
         if identifying_attribute is not None and identifying_attribute not in extract_attributes:
             extract_attributes = [identifying_attribute] + extract_attributes
         textual_operand = data.data[report_column]
-        num_prompts = len([x for x in textual_operand.index.unique(level=0) if x < limit])
+        num_prompts = len([x for x in textual_operand.index.unique(level=0) if x < limit])  # type: ignore
         prompts = partial(self.generate_prompts, table_name=report_table_name,
                           report_column=report_column, textual_operand=textual_operand,
                           columns=extract_attributes, limit=limit)
@@ -149,13 +161,18 @@ class LLMPreprocessor(BasePreprocessor):
             few_shot_labels = self.apply_multi_value_separator(few_shot_labels.normed)
             if few_shot_labels.index.names is None:
                 few_shot_labels = few_shot_labels.reset_index().set_index("index")
-            few_shot_labels = few_shot_labels[columns]
+            few_shot_labels = few_shot_labels[columns]  # type: ignore
 
-        for i in sorted(textual_operand.index.unique(level=0))[process_id::num_processes]:
-            if i >= limit:
+        batch_size = self.llm_batch_size
+        all_ids = sorted(textual_operand.index.unique(level=0))
+        id_selector = np.arange(math.ceil(len(all_ids) /  batch_size))[process_id::num_processes]
+        for idx in id_selector:
+            i_range = all_ids[idx * batch_size : (idx + 1) * batch_size]
+            i_range = [i for i in i_range if i < limit]
+            if len(i_range) == 0:
                 break
-            text = textual_operand.loc[[i]].iloc[0]
-            prompt, prefix = self.single_prompt(columns, table_name, text)
+            texts = textual_operand.loc[i_range].drop_duplicates()
+            prompt, prefix = self.single_prompt(columns, table_name, texts)
             if self.num_samples > 0:
                 prompt = self.generate_few_shot_prompt(report_column, columns, table_name, prompt, few_shot_labels)
             yield prompt, prefix
@@ -174,18 +191,37 @@ class LLMPreprocessor(BasePreprocessor):
                                               num_samples, replace=False)
         # Generate prompts
         result = []
-        for i in prompt_report_ids_random[-num_samples:]:
-            text = texts.loc[i]
-            label = few_shot_labels.loc[[i]] if i in few_shot_labels.index else few_shot_labels.loc[[]]
-            label = label.to_csv(sep=DELIMITER, index=False)
-            result += self.single_prompt(columns, table_name, text)[0]
-            result += [{"role": "assistant", "content": f"Output:\n{label}"}]
+        selected_sample_ids = prompt_report_ids_random[-num_samples:]
+        texts = texts.loc[selected_sample_ids]  # type: ignore
+        labels = [few_shot_labels.loc[[i]] if i in few_shot_labels.index else few_shot_labels.loc[[]]
+                  for i in selected_sample_ids]
+        labels = [label.to_csv(sep=DELIMITER, index=False) for label in labels]
+
+        for i in range(0, len(texts), self.llm_batch_size):
+            texts_batch = texts.iloc[i:i + self.llm_batch_size]
+            labels_batch = labels[i:i + self.llm_batch_size]
+            if len(texts_batch) < self.llm_batch_size:
+                continue  # Skip last batch if it is smaller than batch size
+            result += self.single_prompt(columns, table_name, texts_batch)[0]
+            if self.llm_batch_size > 1:
+                result += [{"role": "assistant",
+                            "content": "\n\n".join(f"Output {i + 1}:\n{label}"
+                                                   for i, label in enumerate(labels_batch))}]
+            else:
+                result += [{"role": "assistant", "content": f"Output:\n{labels_batch[0]}"}]
         return result + prompt
 
     def apply_multi_value_separator(self, labels):
         return labels.applymap(lambda x: f"{MULTI_VALUE_SEPARATOR} ".join(sorted(set(x))))
 
-    def single_prompt(self, columns, table_name, text):
+    def single_prompt(self, columns, table_name, texts):
+        if self.llm_batch_size == 1:
+            result, prefix = self.single_prompt_single_text(columns, table_name, texts.iloc[0])
+        else:
+            result, prefix = self.single_prompt_multiple_text(columns, table_name, texts)
+        return result, prefix
+
+    def single_prompt_single_text(self, columns, table_name, text):
         prefix = f"{DELIMITER.join(columns)}\n"
         result = [{"role": "user", "content":
             (f"Request: Transform the input text to a {table_name[1]} table. "
@@ -196,6 +232,23 @@ class LLMPreprocessor(BasePreprocessor):
             ) if REQUEST_FIRST else
             (f"Input: {text}\n"
              f"Request: Transform the input text to a {table_name[1]} table. "
+             f"Only output the table in CSV-Format without explanations. Use '{DELIMITER}' as CSV delimiter. "
+             f"If there are multiple values for a cell, use '{MULTI_VALUE_SEPARATOR}' as value delimiter. "
+             f"If there is no information for a cell, leave it empty. The header row is: {prefix}")
+        }]
+        return result, prefix
+
+    def single_prompt_multiple_text(self, columns, table_name, texts):
+        prefix = f"{DELIMITER.join(columns)}\n"
+        result = [{"role": "user", "content":
+            (f"Request: Transform each input text to a {table_name[1]} table. "
+             f"Only output the table in CSV-Format without explanations. Use '{DELIMITER}' as CSV delimiter. "
+             f"If there are multiple values for a cell, use '{MULTI_VALUE_SEPARATOR}' as value delimiter. "
+             f"If there is no information for a cell, leave it empty. The header row is: {prefix}\n\n"
+             + "\n\n".join(f"Input {i + 1}: {text}" for i, text in enumerate(texts))
+            ) if REQUEST_FIRST else
+            ("\n\n".join(f"Input {i + 1}: {text}" for i, text in enumerate(texts)) +
+             f"\n\nRequest: Transform each input text to a {table_name[1]} table. "
              f"Only output the table in CSV-Format without explanations. Use '{DELIMITER}' as CSV delimiter. "
              f"If there are multiple values for a cell, use '{MULTI_VALUE_SEPARATOR}' as value delimiter. "
              f"If there is no information for a cell, leave it empty. The header row is: {prefix}")

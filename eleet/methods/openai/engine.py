@@ -1,4 +1,6 @@
+from itertools import zip_longest
 import logging
+import re
 from sys import stderr, stdout
 
 from attr import field
@@ -50,9 +52,13 @@ class OpenAIEngine(LLMEngine):
     parallel_requests: bool = field(default=False)
     only_cost_estimation: bool = field(default=False, init=False)
     cost_estimation_cache = set()
+    llm_batch_size: int = field(default=1)
 
     def __attrs_post_init__(self):
-        self.name = self.llm.model_name
+        if self.llm_batch_size == 1:
+            self.name = self.llm.model_name
+        else:
+            self.name = f"{self.llm.model_name}:{self.llm_batch_size}"
 
     def max_prompt_length(self, x):
         max_prompt_length = {
@@ -64,11 +70,11 @@ class OpenAIEngine(LLMEngine):
         return max_prompt_length[x]
 
     def get_cache_file(self):
-        cache_file = f"{self.llm.model_name}.pkl"
+        cache_file = f"{self.name}.pkl"
         cache_file = self.cache_dir / cache_file
         return cache_file
 
-    def execute(self, model_input, attributes, identifying_attribute, force_single_value_attributes, mode: EngineMode):
+    def execute(self, model_input, attributes, identifying_attribute, force_single_value_attributes, mode: EngineMode):  # type: ignore
         if identifying_attribute is not None and identifying_attribute not in attributes:
             attributes = [identifying_attribute] + attributes
         model_input.prompts.operations = [self.truncate_prompt, self.adjust_prompt]
@@ -84,10 +90,16 @@ class OpenAIEngine(LLMEngine):
         self.update_cache(cache_key, cached_result is None, (raw_results, prefixes))
 
         results = []
-        for i, (result, prefix) in enumerate(zip(raw_results, prefixes)):
-            result = self.read_csv(prefix, result, force_single_value_attributes)
-            result.index = np.ones(len(result), dtype=int) * i  # type: ignore
-            results.append(result)
+        for result, prefix in zip(raw_results, prefixes):
+            if "Output" in result:
+                splitted_result = re.split(r"Output( \d+)?:\n", result)[2::2]
+            else:
+                splitted_result = [result]
+            for table, _ in zip_longest(splitted_result, range(self.llm_batch_size), fillvalue=""):
+                csv = self.read_csv(prefix, table, force_single_value_attributes)
+                csv.index = np.ones(len(csv), dtype=int) * len(results)  # type: ignore
+                results.append(csv)
+        results = results[:len(model_input.data)]
         return self.finalize(model_input, attributes, identifying_attribute, results)
 
     def translate(self, prompts):
@@ -107,10 +119,10 @@ class OpenAIEngine(LLMEngine):
                         for result in raw_results]
         return raw_results, prefixes
 
-    def get_num_tokens(self, text):
+    def get_num_tokens(self, text):  # type: ignore
         return self.llm.get_num_tokens(text) + 30  # buffer
 
-    def get_model_name(self):
+    def get_model_name(self):  # type: ignore
         return self.llm.model_name
 
     def adjust_prompt(self, prompt):

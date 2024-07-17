@@ -1,7 +1,7 @@
+from typing import List, Optional
 from unidecode import unidecode
 from collections import namedtuple
 from functools import partial
-from sys import stdout
 import numpy as np
 import pandas as pd
 import logging
@@ -13,7 +13,7 @@ from fuzzywuzzy import fuzz
 
 RunDescription = namedtuple("RunDescription", ["method", "query", "split_size", "dataset", "test", "limit"])
 RunResult = namedtuple("RunResult", ["predictions", "labels", "text_index_name", "relevant_columns", "relevant_ids",
-                                     "identifying_attribute", "runtime", "index_build_time"])
+                                     "identifying_attribute", "runtime", "index_build_time", "metadata"])
 logger = logging.getLogger(__name__)
 
 
@@ -42,7 +42,7 @@ def evaluate(collected_results):
                                   if r in result.predictions.data.index.get_level_values(0)]
             this_predictions = result.predictions.data.loc[relevant_ids_preds][this_relevant_columns]
             this_labels = result.labels.data.loc[relevant_ids_labels][this_relevant_columns]
-        stats = compute_stats(this_predictions, this_labels, k, result.identifying_attribute)
+        stats = compute_stats(this_predictions, this_labels, k, result.identifying_attribute, result.metadata)
         collected_stats.append(stats)
     stats = pd.concat(collected_stats)
     metrics = compute_metrics(stats)
@@ -63,7 +63,7 @@ def compute_metrics(stats):
     return result
 
 
-def compute_stats(pred, labels, desc, identifying_attribute):
+def compute_stats(pred, labels, desc, identifying_attribute, metadata):
     results = dict()
     string_labels = labels.applymap(lambda x: isinstance(x, str)).all()
     if any(string_labels):
@@ -77,9 +77,13 @@ def compute_stats(pred, labels, desc, identifying_attribute):
         tp, fp, fn = compute_counts(pred.loc[[index_id]] if index_id in pred.index else pred.iloc[:0],
                                     labels.loc[[index_id]] if index_id in labels.index else labels.iloc[:0],
                                     identifying_attribute=identifying_attribute)
-        results[(*desc, index_id)] = {"tp": tp, "fp": fp, "fn": fn, "id": index_id}
-    result = pd.DataFrame(results).T
-    result[["tp", "fp", "fn"]] = result[["tp", "fp", "fn"]].astype(int)
+        this_metadata = metadata.loc[index_id]
+        results[(*desc, index_id)] = {"tp": tp, "fp": fp, "fn": fn, "id": index_id, **this_metadata}
+    result = pd.DataFrame(results, index=["tp", "fp", "fn", "id", *metadata.columns]).T
+    if len(result) == 0:
+        result.index= pd.MultiIndex.from_arrays([[] for _ in range(len(RunDescription._fields) + 1)],
+                                                names=[*RunDescription._fields, "idx"])  # type: ignore
+    result[["tp", "fp", "fn"]] = result[["tp", "fp", "fn"]].astype(int)  # type: ignore
     result.index.names = [*RunDescription._fields, "idx"]
     return result
 
@@ -100,7 +104,7 @@ def compute_counts(pred_table, label_table, identifying_attribute):
                                if isinstance(v, (str, int, float)) else unidecode(v[0].lower().replace(" ", ""))
                                for v in value if v != ""]
             else:
-                pred_values = [str(value).lower().replace(" ", "")] if value != "" else []
+                pred_values: List[Optional[str]] = [str(value).lower().replace(" ", "")] if value != "" else []
             label_values = [{unidecode(str(x).lower().replace(" ", "")) for x in v} for v in label_table.loc[i][col]]
 
             for j, value in enumerate(pred_values):

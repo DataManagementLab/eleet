@@ -4,6 +4,7 @@ from eleet.datasets.aviation.aviation import load_aviation
 from eleet.datasets.corona.corona import load_corona
 from eleet.datasets.rotowire.rotowire import load_rotowire_legacy
 from eleet.datasets.trex.trex import load_trex_legacy
+from eleet.datasets.diagnoses.generate import load_diagnoses
 from eleet.methods.openai.engine import LLM_COST
 from eleet.methods.operator import Join, MMJoin, MMUnion
 
@@ -47,6 +48,7 @@ def get_model(model_name):
             cache_dir=Path("predictions") / "finetuning" / "cache"
         )
         return engine, preprocessor
+    raise ValueError(f"Unknown model {model_name}")
 
 def get_rotowire_queries():
     db_train = load_rotowire_legacy(Path(__file__).parents[1] / "datasets" / "rotowire", "train")
@@ -170,6 +172,14 @@ def get_aviation_queries():
     ], join_key="report_number")
 
     return db_train, db_valid, (union, join)
+
+
+def get_diagnoses_queries():
+    db_train = load_diagnoses(Path(__file__).parents[1] / "datasets" / "diagnoses", "train")
+    db_valid = load_diagnoses(Path(__file__).parents[1] / "datasets" / "diagnoses", "test")
+    union_health = MMUnion(operands=["health_issues", "reports.health_issues_new"])
+    union_computer = MMUnion(operands=["computer_problems", "reports.computer_problems_new"])
+    return db_train, db_valid, (union_health, union_computer)
 
 
 def main():

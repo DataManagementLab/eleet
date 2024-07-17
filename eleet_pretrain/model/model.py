@@ -79,7 +79,7 @@ class EleetModel(BaseEleetModel):
 
     def encode_unflatten(self, *args, batch_size, max_row_num, sequence_len, flatten_info):
         adjust_func = None
-        if self.fast_mode and not self.training: 
+        if self.fast_mode and not self.training:
             mask = flatten_info
             this_num_rows = mask[0].sum()
             idx = torch.zeros(batch_size, max_row_num, dtype=int, device=mask.device)
@@ -142,5 +142,5 @@ class EleetModel(BaseEleetModel):
             span_mask[i, s: e] = 1
             span_mask[i, s] += 1
             span_mask[i, e - 1] += 2
-        
+
         return self.span_embedding(context_encoding, b_id, r_id, span_mask, span_lengths)

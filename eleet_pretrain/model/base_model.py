@@ -460,15 +460,13 @@ class BaseEleetModel(VerticalAttentionTableBert, PreTrainedModel):
         attention_mask = sequence_mask.permute(0, 2, 1)[:, :, None, :, None]
         attention_mask = (1.0 - attention_mask) * -10000.0
 
-        hidden_states = table_encoding
-        vertical_layer_outputs = []
+        hidden_state = table_encoding
         for vertical_layer in self.vertical_transformer_layers:
-            hidden_states = vertical_layer(hidden_states, attention_mask=attention_mask)
-            vertical_layer_outputs.append(hidden_states)
+            hidden_state = vertical_layer(hidden_state, attention_mask=attention_mask)
 
-        last_hidden_states = vertical_layer_outputs[-1] * sequence_mask.unsqueeze(-1)
+        last_hidden_state = hidden_state * sequence_mask.unsqueeze(-1)
 
-        return last_hidden_states
+        return last_hidden_state
 
 
     @staticmethod

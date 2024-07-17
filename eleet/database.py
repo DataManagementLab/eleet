@@ -1,3 +1,4 @@
+import os
 from contextlib import ExitStack
 from datetime import datetime, timedelta
 from attr import Factory
@@ -5,6 +6,7 @@ from attrs import define, field
 from typing import Dict, List, Optional, Set
 import pandas as pd
 import numpy as np
+from transformers import BertTokenizerFast
 from eleet.methods.base_engine import BaseEngine
 
 
@@ -42,6 +44,22 @@ class Database():
         engine.index_build_time = timedelta()
         engine.runtime_correction = timedelta()
         return result
+
+    def get_text_metadata(self, query_plan):
+        os.environ["TOKENIZERS_PARALLELISM"] = "false"
+        tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
+
+        def get_num_tokens(text):
+            return len(tokenizer(text)["input_ids"])
+
+        text_collection_table = query_plan.get_leaf_operands(self, TextCollectionTable)[0]
+        num_words = text_collection_table.text_collection.data.apply(lambda x: len(x[-1].split()), axis=1)
+        num_tokens = text_collection_table.text_collection.data.apply(lambda x: get_num_tokens(x[-1]), axis=1)
+        metadata = pd.DataFrame({
+            "num_words": num_words,
+            "num_tokens": num_tokens
+        })
+        return metadata
 
     def finetune(self, query_plans, preprocessor, engine, db_valid: Optional["Database"]):
         with ExitStack() as stack:
@@ -126,7 +144,8 @@ class TextCollectionTable():
     labels: Optional["TextCollectionLabels"] = field()
     identifying_attribute: Optional[str] = field()
     force_single_value_attributes: List[str] = field(converter=lambda x: set(x) if x is not None else set())
-    delayed_selection = field(init=False, default=None)
+    simulate_single_table: bool = field(default=False)
+    delayed_selection: Optional[bool] = field(init=False, default=None)
 
     @multi_row.validator
     def check_identifying_attribute(self, attribute, value):
@@ -137,6 +156,8 @@ class TextCollectionTable():
 
     @property
     def multi_table(self):
+        if self.simulate_single_table:
+            return False
         return len(self.text_collection.text_tables) > 1
 
     @property
@@ -189,11 +210,13 @@ class TextCollection():
         return self.data.columns[0]
 
     def setup_text_table(self, table_name: str, attributes: List[str],  multi_row: bool,
-                         identifying_attribute=None, labels=None, force_single_value_attributes: Set = None):
+                         identifying_attribute=None, labels=None, force_single_value_attributes: Set = None,
+                         simulate_single_table=False):
         attributes = [a for a in attributes if a not in self.key_columns]
         result = TextCollectionTable(text_collection=self, name=table_name, attributes=attributes,
                                      multi_row=multi_row, identifying_attribute=identifying_attribute, labels=labels,
-                                     force_single_value_attributes=force_single_value_attributes)
+                                     force_single_value_attributes=force_single_value_attributes,
+                                     simulate_single_table=simulate_single_table)
         self.text_tables[table_name] = result
         return result
 
@@ -207,7 +230,7 @@ class TextCollection():
             assert len(value.columns) == 2
             assert value[value.columns[0]].dtype == int
             assert value[value.columns[1]].dtype == np.dtype("O")
-    
+
     def preprocess(self):
         pass
 

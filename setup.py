@@ -17,7 +17,7 @@ setup(
     description=("Multi-modal Database."),
     # license = "Apache",
     keywords="multi-modal database",
-    packages=['eleet', 'eleet_pretrain'],
+    packages=['eleet_pretrain', 'eleet'],
     long_description=read('README.md'),
     classifiers=[
         "Development Status :: 3 - Alpha",

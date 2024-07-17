@@ -126,14 +126,14 @@ def load_aviation(db_dir, split):
 
     aircraft_to_reports = evidence.groupby(EVIDENCE_ATTRIBUTES).agg(list) \
         .reset_index().explode("report_number")[["aircraft_registration_number", "report_number"]]
-    
+
     evidence.drop("report_number", axis="columns", inplace=True)
 
     texts = pd.DataFrame([(i, x["text"].replace("\r", "")) for i, x in enumerate(docs)],
                          columns=["report_number", "text"])
     normed.index = texts["report_number"]
     alignments.index = texts["report_number"]
-    
+
     tables = [
         Table(name="aircraft", data=evidence, key_columns=["aircraft_registration_number"]),
         Table(name="aircraft_to_reports", data=aircraft_to_reports, key_columns=["aircraft_registration_number",

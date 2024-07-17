@@ -180,9 +180,9 @@ class ELEETFinetuneEngine(ELEETEngine):
         parser.add_argument("--weight-decay", type=float, default=0.01)
         parser.add_argument("--max-grad-norm", type=float, default=1.0)
         parser.add_argument("--num-eval", type=int, default=0)
-        parser.add_argument("--per-device-eval-batch-size", type=int, default=16),
+        parser.add_argument("--per-device-eval-batch-size", type=int, default=16)
         parser.add_argument("--eval-accumulation-steps", type=int, default=16)
-        parser.add_argument("--logging-steps", type=int, default=100),
+        parser.add_argument("--logging-steps", type=int, default=100)
         parser.add_argument("--dataloader-num-workers", type=int, default=10)
         parser.add_argument("--save-steps", type=int, default=100_000_000)
         parser.add_argument("--debug-fraction", type=float, default=1/1000)

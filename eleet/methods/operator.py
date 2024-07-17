@@ -19,6 +19,22 @@ def shorten_project_columns(project_columns):
         return ",".join(project_columns)
     return ",".join(project_columns[:4]) + "," + project_columns[4][:2] + "…"
 
+def latex_str(s, database):
+    if isinstance(s, str):
+        s = s.replace("Game ID", "path")
+        s = s.replace("index", "path")
+        s = s.replace("report_number", "path")
+        s = s.replace("-union", "tbl")
+        s = s.replace("-join", "info")
+        # escape special characters
+        s = s.replace("_", "\\_")
+        s = s.replace("-", " ")
+        return s
+    if isinstance(s, (list, tuple)):
+        return ", ".join(latex_str(x, database) for x in s)
+    return s._latex(database)
+
+
 @define
 class Operator(ABC):
     operands: List[Union[str, "Operator"]] = field()
@@ -30,7 +46,7 @@ class Operator(ABC):
 
         operands = [
             database.get(o) if isinstance(o, str) else o.execute(database, preprocessor, engine)
-            for o in self.operands 
+            for o in self.operands
         ]
         assert len(operands) == len(self.operand_types)
         for operand, operand_type in zip(operands, self.operand_types):
@@ -38,11 +54,20 @@ class Operator(ABC):
         result = self._execute(operands, preprocessor, engine, with_labels=isinstance(engine, LabelEngine))
         return result
 
+    def get_leaf_operands(self, database: Database, filter_by_type=object):
+        leaf_operands = [
+            leaf
+            for o in self.operands
+            for leaf in ([database.get(o)] if isinstance(o, str) else o.get_leaf_operands(database))
+            if isinstance(leaf, filter_by_type)
+        ]
+        return leaf_operands
+
     def get_finetuning_data(self, database: Database, preprocessor: BasePreprocessor, shuffle: bool):
         for o in self.operands:
             if isinstance(o, MMOperator):
                 return o.get_finetuning_data(database, preprocessor, shuffle)
-            
+
         for o in self.operands:
             r = o.get_finetuning_data(database, preprocessor, shuffle)
             if r is not None:
@@ -51,6 +76,9 @@ class Operator(ABC):
     @abstractmethod
     def _execute(self, operands, preprocessor, engine, with_labels=False):
         pass
+
+    def latex(self, database: Database):
+        return f"\\item ${self._latex(database)}$"
 
 
 @define
@@ -75,6 +103,12 @@ class Join(Operator):
             raise NotImplementedError("Computation of labels for Join after MMOp not implemented yet.")
         return Table(name=f"{operands[0].name} ⨝ {operands[1].name}", data=result, key_columns=result.index.names)
 
+    def _latex(self, database: Database):
+        left = latex_str(self.operands[0], database)
+        right = latex_str(self.operands[1], database)
+        cond = latex_str(self.join_key, database)
+        return f"{left} \, \\Join_{{{cond}}} \, {right}"
+
 
 @define
 class Selection(Operator):
@@ -85,6 +119,10 @@ class Selection(Operator):
         selected = operands[0].data.index.sort_values()[: max(int(len(operands[0].data.index) * self.selectivity), 1)]
         data = operands[0].data.loc[selected]
         return Table(name=f"σ_{self.selectivity}({operands[0].name})", data=data, key_columns=operands[0].key_columns)
+
+    def _latex(self, database: Database):
+        operand = latex_str(self.operands[0], database)
+        return f"\\sigma_{{{self.selectivity}}}({operand})"
 
 
 @define
@@ -98,6 +136,11 @@ class Projection(Operator):
         name = f"π_{shorten_project_columns(self.project_columns)}({operands[0].name})"
         result = Table(name=name, data=projected, key_columns=operands[0].key_columns)
         return result
+
+    def _latex(self, database: Database):
+        operand = latex_str(self.operands[0], database)
+        project_columns = latex_str(self.project_columns[1:], database)
+        return f"\\pi_{{{project_columns}}}({operand})"
 
 
 
@@ -185,7 +228,7 @@ class MMJoin(MMOperator, Join):
                                additional_join_keys=[operands[1].identifying_attribute])
         project_columns = self.project_columns or \
             operands[0].attributes + [a for a in operands[1].attributes if a not in operands[0].attributes]
-        extract_attributes = [c for c in project_columns 
+        extract_attributes = [c for c in project_columns
                               if c in operands[1].attributes and c not in operands[0].attributes]
         with preprocessor.compute_finetuning_data(
             report_table_name=operands[1].full_name,
@@ -200,6 +243,21 @@ class MMJoin(MMOperator, Join):
             multi_table=operands[1].multi_table
         ) as finetuning_data:
             yield finetuning_data
+
+    def _latex(self, database: Database):
+        left = latex_str(self.operands[0], database)
+        right = latex_str(self.operands[1], database)
+        if not isinstance(self.operands[0], str):
+            left = "(" + left + ")"
+        cond = latex_str(self.join_key, database)
+        if isinstance(self.operands[0], Join):
+            cond = f"{cond}, {latex_str(self.operands[0].join_key, database)}"
+        if isinstance(self.operands[0], Selection) and isinstance(self.operands[0].operands[0], Join):
+            cond = f"{cond}, {latex_str(self.operands[0].operands[0].join_key, database)}"
+
+        if self.project_columns is not None:
+            right = f"\\ddot \\pi_{{{latex_str(self.project_columns[1:], database)}}}({right})"
+        return f"{left} \, \\ddot \\Join_{{{cond}}} \, {right}"
 
 
 @define
@@ -251,6 +309,16 @@ class MMUnion(MMOperator):
         ) as finetuning_data:
             yield finetuning_data
 
+    def _latex(self, database: Database):
+        left = latex_str(self.operands[0], database)
+        right = latex_str(self.operands[1], database)
+        project_columns = None
+        if isinstance(self.operands[0], Projection):
+            project_columns = self.operands[0].project_columns[1:]
+        if project_columns is not None:
+            right = f"\\ddot \\pi_{{{latex_str(project_columns, database)}}}({right})"
+        return f"{left} \\, \\ddot \\cup \\, {right}"
+
 
 @define
 class MMScan(MMOperator):
@@ -298,6 +366,12 @@ class MMScan(MMOperator):
         labels = TextCollectionLabels(normed=normed, alignments=alignments)
         result.labels = labels
 
+    def _latex(self, database: Database):
+        operand = latex_str(self.operands[0], database)
+        if self.project_columns is not None:
+            operand = f"\\ddot \\pi_{{{latex_str(self.project_columns[1:], database)}}}({operand})"
+        return f"\\ddot Scan({operand})"
+
 
 @define
 class MMAggregation(MMOperator):
@@ -325,6 +399,12 @@ class MMAggregation(MMOperator):
         grouped = data.groupby(self.attribute).agg(partial(reduce, lambda a, b: a + b))
         grouped = grouped.loc[[x for x in grouped.index if len(x) and x[0] not in ("#", ".", ".")]]
         return Table(name=f"G_{self.attribute}({operands[0].name})", data=grouped, key_columns=[self.attribute])
+
+
+    def _latex(self, database: Database):
+        operand = latex_str(self.operands[0], database)
+        attribute = latex_str(self.attribute, database)
+        return f"\\ddot \\chi_{{list,{attribute}}}({operand})"
 
 
 DelayedSelection = namedtuple("DelayedSelection", ["attribute", "func"])
@@ -415,3 +495,8 @@ class MMSelection(MMOperator):
             if not isinstance(v, (set, tuple)) and target_value == v:
                 return True
         return False
+
+    def _latex(self, database: Database):
+        value, selectivitiy = self._choose_condition([database.get(self.operands[0])])
+        operand = latex_str(self.operands[0], database)
+        return f"\\ddot \\sigma_{{{self.attribute}={value}[sel={selectivitiy:.3f}]}}({operand})"

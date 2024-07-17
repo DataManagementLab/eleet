@@ -18,7 +18,7 @@ class BaseEleetConfig():
 
     def _preinit(self, *args, max_len_evidence=120, max_len_answer=20, max_num_answers=20,
                  max_num_queries=50, max_num_cols=10, max_num_query_cols=7,
-                 label_col=True, separate_evidence_from_text=False, 
+                 label_col=True, separate_evidence_from_text=False,
                  disable_vertical_transform=False, window_overlap=100, cutout_col_label_prob=0.15,
                  disable_learned_deduplication=False, disable_header_query_ffn_for_multi_union=False,
                  max_num_deduplication_labels_per_row=20, deduplication_max_normed_len=10, **kwargs):
