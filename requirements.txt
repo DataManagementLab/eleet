@@ -30,3 +30,8 @@ seaborn==0.12.0
 unidecode
 fuzzywuzzy
 openai
+langchain_core
+langchain_community
+llama
+git+https://github.com/meta-llama/llama.git@llama_v2
+accelerate

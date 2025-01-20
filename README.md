@@ -15,78 +15,51 @@ This is the implementation described in
 - Code for everything else (e.g. query plans, MMOps, baselines, benchmark) is located in "eleet".
 - Some scripts are located in "scripts" and "slurm" as described below.
 
-# How to install
+## Setup 
 
-1. `git clone git@github.com:DataManagementLab/eleet.git`
-1. `cd eleet`
-1. `git submodule update --init`
-1. `conda env create -f environment.yml`
-1. `conda activate eleet`
+Install ELEET and all necessary requirements.
 
-<details>
-  <summary>Alternatively: Manual Environment Setup</summary>
-1. Use Python version 3.8 (e.g., by using conda: `conda create -n eleet`, `conda activate eleet` then `conda install python=3.8 pip`)
-1. Install PyTorch https://pytorch.org/get-started/locally/
-1. Install torch-scatter: https://github.com/rusty1s/pytorch_scatter
+```sh
+git clone git@github.com:DataManagementLab/eleet.git  # clone repo
+cd eleet
+git submodule update --init
+conda env create -f environment.yml  # setup environment
+conda activate eleet
+pip install git+https://github.com/meta-llama/llama.git@llama_v2  # install LLaMA
+pip install -e .
+cd TaBERT/ && pip install -e . && cd ..  # install TaBERT
+python -m spacy download en_core_web_sm
+```
 
-   Versions we used:
-
-   ```
-   $ conda list | grep torch
-   pytorch                   1.12.1          py3.8_cuda11.3_cudnn8.3.2_0    pytorch
-   pytorch-mutex             1.0                        cuda    pytorch
-   pytorch-scatter           2.0.9           py38_torch_1.12.0_cu113    pyg
-   torch                     1.12.0+cpu               pypi_0    pypi
-   torch-scatter             2.0.7                    pypi_0    pypi
-   torchaudio                0.12.0+cpu               pypi_0    pypi
-   torchvision               0.13.0+cpu               pypi_0    pypi
-   ```
-
-1. Some requirements need to be installed using conda, as pip seems to have problems:
-    1. Install Cython: ```conda install Cython```
-    1. Install Spacy: ```conda install spacy```
-    1. Install PyJinius: ```conda install -c conda-forge pyjnius```
-    1. Install FastBPE: ```conda install -c conda-forge fastbpe```
-    1. Install curl: ```conda install curl```
-1. Install other requirements: ```pip install -r requirements.txt```
-</details>
-
-1. Install: ```pip install -e .```
-1. Install TaBERT: ```cd TaBERT/ && pip install -e . && cd ..```
-1. Download English Language for spacy: ```python -m spacy download en_core_web_sm```
-1. Download Pre-trained [ELEET model](https://drive.google.com/file/d/1JIvXC0ajRZRCENMlLD3En7SGoodjP6O3/view?usp=sharing) and unzip it to a destination of choice.
-
-<details>
-  <summary>Alternatively: Generate Pre-Training Dataset, Evaluation Datasets and Pre-Train Model.</summary>
-
-# Pre-training
-
-## Generate Pre-Training Dataset:
-1. Run MongoDB and set environment variables (MONGO_USER, MONGO_PASSWORD, MONGO_HOST, MONGO_PORT, MONGO_DB)
-    https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
-1. Start data pre-processing: python scripts/load_data.py trex-wikidata
-    --> preprocessed data will appear in datasets/preprocessed_data/preprocessed_trex-wikidata*
-
-## Alternatively: Download Pre-Training Dataset:
-    Download and unzip Pre-Training Dataset [[here]](TODO).
-
-## Pre-Train Model:
-1. Use slurm/pretrain.slurm for pre-training (Adjust path in file first to point to pre-training dataset).
-    --> Will store pretrained model in models/pretrained
-
-## Generate datasets for fine-tuning and evaluation.
-1. Generate TREx Dataset: ```python eleet/datasets/trex/generate.py```
-1. Generate Rotowire Dataset: ```python eleet/datasets/rotowire/generate.py```
-
-</details>
-
-# Finetuning + Evaluation
+## Download pre-trained model and datasets
+```sh
+gdown 1JIvXC0ajRZRCENMlLD3En7SGoodjP6O3
+tar -xzvf pretrained-model.tar.gz
+gdown 1hFCwdf8CIWDpE3KdHVfT8uQVrpE1Bv1c
+tar -xzvf datasets.tar.gz
+```
+## Finetuning + Evaluation
 
 1. Run finetuning: ```sbatch slurm/rotowire/train-ours.slurm``` (Repeat for other datasets and models).
     --> Will store finetuned model in models/rotowire/ours/finetuned
 1. Run evaluation: ```python eleet/benchmark.py --slurm-mode --use-test-set```
 1. Visualize results using Jupyter notebooks located in ```scripts/*.ipynb```
 
+
+## Pre-Training and generation of datasets
+
+1. You can download the pre-training dataset [here](https://drive.google.com/file/d/11D-iSwaOMVwQn20NnD81GRwMjMhMX3ma/view?usp=drive_link)
+
+Alternatively, you can also generate the pre-training dataset from Wikidata:
+
+1. Run MongoDB and set environment variables (MONGO_USER, MONGO_PASSWORD, MONGO_HOST, MONGO_PORT, MONGO_DB)
+    https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+1. Start data pre-processing: python scripts/load_data.py trex-wikidata
+    --> preprocessed data will appear in datasets/preprocessed_data/preprocessed_trex-wikidata*
+1. Use slurm/pretrain.slurm for pre-training (Adjust path in file first to point to pre-training dataset).
+    --> Will store pretrained model in models/pretrained
+1. Generate TREx Dataset: ```python eleet/datasets/trex/generate.py```
+1. Generate Rotowire Dataset: ```python eleet/datasets/rotowire/generate.py```
 
 # Reference
 
@@ -103,5 +76,4 @@ If you use code or the benchmarks of this repository then please cite our paper:
   year={2024},
   publisher={VLDB Endowment}
 }
-
 ```

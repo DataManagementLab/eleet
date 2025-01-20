@@ -1,21 +1,11 @@
 """A trainer that logs components of the loss."""
 
-from copy import deepcopy
-import math
-import time
-from sklearn.cluster import AgglomerativeClustering
 import torch
-import numpy as np
-from typing import Dict, List, Optional
 from transformers import Trainer
-from torch.utils.data import Dataset, DataLoader
-from transformers.trainer_utils import speed_metrics
+from torch.utils.data import DataLoader
 from transformers.trainer_utils import EvalLoopOutput
 from transformers.trainer_utils import seed_worker
 from transformers.trainer_callback import ProgressCallback
-
-from eleet_pretrain.datasets.dataloader import EleetInferenceDataLoader
-from eleet_pretrain.model.model import EleetModel
 
 
 class EleetTrainer(Trainer):
@@ -65,23 +55,23 @@ class EleetTrainer(Trainer):
             self._additional_logs["num"] += 1
         return (loss, outputs) if return_outputs else loss
 
-    def get_eval_dataloader(self, eval_dataset: Optional[Dataset] = None) -> DataLoader:
-        if not isinstance(self.model, EleetModel):
-            return super().get_eval_dataloader(eval_dataset)
-
-        if eval_dataset is None and self.eval_dataset is None:
-            raise ValueError("Trainer: evaluation requires an eval_dataset.")
-        eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
-        return EleetInferenceDataLoader(
-                eval_dataset,
-                batch_size=self.args.per_device_eval_batch_size,
-                collate_fn=self.data_collator,
-                drop_last=self.args.dataloader_drop_last,
-                num_workers=self.args.dataloader_num_workers,
-                pin_memory=self.args.dataloader_pin_memory,
-                model=self.model,
-                is_complex_operation=self.is_complex_operation
-            )
+    # def get_eval_dataloader(self, eval_dataset: Optional[Dataset] = None) -> DataLoader:
+    #     if not isinstance(self.model, EleetModel):
+    #         return super().get_eval_dataloader(eval_dataset)
+    #
+    #     if eval_dataset is None and self.eval_dataset is None:
+    #         raise ValueError("Trainer: evaluation requires an eval_dataset.")
+    #     eval_dataset = eval_dataset if eval_dataset is not None else self.eval_dataset
+    #     return EleetInferenceDataLoader(
+    #             eval_dataset,
+    #             batch_size=self.args.per_device_eval_batch_size,
+    #             collate_fn=self.data_collator,
+    #             drop_last=self.args.dataloader_drop_last,
+    #             num_workers=self.args.dataloader_num_workers,
+    #             pin_memory=self.args.dataloader_pin_memory,
+    #             model=self.model,
+    #             is_complex_operation=self.is_complex_operation
+    #         )
 
     def get_train_dataloader(self) -> DataLoader:
         """
@@ -122,71 +112,71 @@ class EleetTrainer(Trainer):
             worker_init_fn=seed_worker,
         )
 
-    def evaluate(self, eval_dataset: Optional[Dataset] = None,
-                 ignore_keys: Optional[List[str]] = None, metric_key_prefix: str = "eval") -> Dict[str, float]:
-        self._memory_tracker.start()
-
-        eval_dataloader = self.get_eval_dataloader(eval_dataset)
-        start_time = time.time()
-
-        eval_loop = self.prediction_loop if self.args.use_legacy_prediction_loop else self.evaluation_loop
-
-        if isinstance(self.model, EleetModel) or self.do_normalize:
-            self._td_compute_metrics = self.compute_metrics
-            self.compute_metrics = None
-
-        self.model.eval_stage = 0
-        output = eval_loop(  # First iteration
-            eval_dataloader,
-            description="Evaluation",
-            prediction_loss_only=False,
-            ignore_keys=ignore_keys,
-            metric_key_prefix=metric_key_prefix,
-        )
-
-        if isinstance(self.model, EleetModel):
-            other_labels = output.label_ids
-            if len(self.label_names) == 1:
-                 other_labels = (output.label_ids, )
-
-            i = 2
-            while not eval_dataloader.is_done():  # other iterations of complex db ops algorithm
-                eval_dataloader.advance_stage(*map(torch.tensor, output.predictions))
-                self.update_progress_bar(eval_dataloader)
-                self.model.eval_stage = i
-                output2 = eval_loop(
-                    eval_dataloader,
-                    description=f"Evaluation Table Decoder Iteration {i}",
-                    # No point gathering the predictions if there are no metrics, otherwise we defer to
-                    # self.args.prediction_loss_only
-                    prediction_loss_only=False,
-                    ignore_keys=ignore_keys,
-                    metric_key_prefix=metric_key_prefix,
-                )
-                output = self.merge_outputs(output, output2)
-                i += 1
-            eval_metrics = eval_dataloader.final_results_eval(self._td_compute_metrics, other_labels,
-                                                              normalize=self.do_normalize)
-            output.metrics.update({f"eval_{key}": value for key, value in eval_metrics.items()})
-            self.compute_metrics = self._td_compute_metrics
-
-        total_batch_size = self.args.eval_batch_size * self.args.world_size
-        output.metrics.update(
-            speed_metrics(
-                metric_key_prefix,
-                start_time,
-                num_samples=output.num_samples,
-                num_steps=math.ceil(output.num_samples / total_batch_size),
-            )
-        )
-
-        self.log(output.metrics)
-
-        self.control = self.callback_handler.on_evaluate(self.args, self.state, self.control, output.metrics)
-
-        self._memory_tracker.stop_and_update_metrics(output.metrics)
-
-        return output.metrics
+    # def evaluate(self, eval_dataset: Optional[Dataset] = None,
+    #              ignore_keys: Optional[List[str]] = None, metric_key_prefix: str = "eval") -> Dict[str, float]:
+    #     self._memory_tracker.start()
+    #
+    #     eval_dataloader = self.get_eval_dataloader(eval_dataset)
+    #     start_time = time.time()
+    #
+    #     eval_loop = self.prediction_loop if self.args.use_legacy_prediction_loop else self.evaluation_loop
+    #
+    #     if isinstance(self.model, EleetModel) or self.do_normalize:
+    #         self._td_compute_metrics = self.compute_metrics
+    #         self.compute_metrics = None
+    #
+    #     self.model.eval_stage = 0
+    #     output = eval_loop(  # First iteration
+    #         eval_dataloader,
+    #         description="Evaluation",
+    #         prediction_loss_only=False,
+    #         ignore_keys=ignore_keys,
+    #         metric_key_prefix=metric_key_prefix,
+    #     )
+    #
+    #     if isinstance(self.model, EleetModel):
+    #         other_labels = output.label_ids
+    #         if len(self.label_names) == 1:
+    #              other_labels = (output.label_ids, )
+    #
+    #         i = 2
+    #         while not eval_dataloader.is_done():  # other iterations of complex db ops algorithm
+    #             eval_dataloader.advance_stage(*map(torch.tensor, output.predictions))
+    #             self.update_progress_bar(eval_dataloader)
+    #             self.model.eval_stage = i
+    #             output2 = eval_loop(
+    #                 eval_dataloader,
+    #                 description=f"Evaluation Table Decoder Iteration {i}",
+    #                 # No point gathering the predictions if there are no metrics, otherwise we defer to
+    #                 # self.args.prediction_loss_only
+    #                 prediction_loss_only=False,
+    #                 ignore_keys=ignore_keys,
+    #                 metric_key_prefix=metric_key_prefix,
+    #             )
+    #             output = self.merge_outputs(output, output2)
+    #             i += 1
+    #         eval_metrics = eval_dataloader.final_results_eval(self._td_compute_metrics, other_labels,
+    #                                                           normalize=self.do_normalize)
+    #         output.metrics.update({f"eval_{key}": value for key, value in eval_metrics.items()})
+    #         self.compute_metrics = self._td_compute_metrics
+    #
+    #     total_batch_size = self.args.eval_batch_size * self.args.world_size
+    #     output.metrics.update(
+    #         speed_metrics(
+    #             metric_key_prefix,
+    #             start_time,
+    #             num_samples=output.num_samples,
+    #             num_steps=math.ceil(output.num_samples / total_batch_size),
+    #         )
+    #     )
+    #
+    #     self.log(output.metrics)
+    #
+    #     self.control = self.callback_handler.on_evaluate(self.args, self.state, self.control, output.metrics)
+    #
+    #     self._memory_tracker.stop_and_update_metrics(output.metrics)
+    #
+    #     return output.metrics
 
     def update_progress_bar(self, eval_dataloader):
         try:
