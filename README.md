@@ -1,3 +1,14 @@
+# ELEET: Efficient Learned Query Execution over Text and Tables
+
+ELEET is an Execution Engine to run multi-modal queries over datasets containing texts and tables.
+This is the implementation described in 
+
+> Matthias Urban and Carsten Binnig: "ELEET: Efficient Learned Query Execution over Text and Tables.", PVLDB, 17(13): 4867-4880, 2024. [[PDF]]()
+>
+> ![Image of ELEET](paper_img.png)
+
+
+
 # Project Structure
 
 - Code regarding Pre-training (i.e. corpus construction and pre-training scripts) is located in "eleet_pretrain"
@@ -6,9 +17,12 @@
 
 # How to install
 
-1. Use Python version 3.8
-2. Install PyTorch https://pytorch.org/get-started/locally/  (tested using conda)
-3. Install torch-scatter: https://github.com/rusty1s/pytorch_scatter  (tested using conda)
+1. `git clone git@github.com:DataManagementLab/eleet.git`
+1. `cd eleet`
+1. `git submodule update --init`
+1. Use Python version 3.8 (e.g., by using conda): `conda create -n eleet` then `conda install python=3.8 pip`
+1. Install PyTorch https://pytorch.org/get-started/locally/
+1. Install torch-scatter: https://github.com/rusty1s/pytorch_scatter
 
    Versions we used:
 
@@ -23,22 +37,24 @@
    torchvision               0.13.0+cpu               pypi_0    pypi
    ```
 
-4. Install Cython: ```pip install Cython```
-5. Install PyJinius: ```conda install -c conda-forge pyjnius```
-6. Install FastBPE: ```conda install -c conda-forge fastbpe```
-7. Install curl: ```conda install curl```
-8. Install other stuff: ```pip install -r requirements.txt```
-9. Install: ```pip install -e .```
-10. Install TaBERT: ```cd TaBERT/ && pip install -e . && cd ..```
-11. Download English Language for spacy: ```python -m spacy download en_core_web_sm```
+1. Some requirements need to be installed using conda, as pip seems to have problems:
+    1. Install Cython: ```conda install Cython```
+    1. Install Spacy: ```conda install spacy```
+    1. Install PyJinius: ```conda install -c conda-forge pyjnius```
+    1. Install FastBPE: ```conda install -c conda-forge fastbpe```
+    1. Install curl: ```conda install curl```
+1. Install other requirements: ```pip install -r requirements.txt```
+1. Install: ```pip install -e .```
+1. Install TaBERT: ```cd TaBERT/ && pip install -e . && cd ..```
+1. Download English Language for spacy: ```python -m spacy download en_core_web_sm```
 
 # Pre-training
 
-12. Run MongoDB and set environment variables (MONGO_USER, MONGO_PASSWORD, MONGO_HOST, MONGO_PORT, MONGO_DB)
+1. Run MongoDB and set environment variables (MONGO_USER, MONGO_PASSWORD, MONGO_HOST, MONGO_PORT, MONGO_DB)
     https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
-13. Start data pre-processing: python scripts/load_data.py trex-wikidata
+1. Start data pre-processing: python scripts/load_data.py trex-wikidata
     --> preprocessed data will appear in datasets/preprocessed_data/preprocessed_trex-wikidata*
-14. Use slurm/pretrain.slurm for pre-training (Adjust path in file first).
+1. Use slurm/pretrain.slurm for pre-training (Adjust path in file first).
     --> Will store pretrained model in models/pretrained
 
 # Finetuning + Evaluation
@@ -49,3 +65,22 @@
     --> Will store finetuned model in models/rotowire/ours/finetuned
 18. Run evaluation: ```python eleet/benchmark.py --slurm-mode --use-test-set```
 19. Visualize results using Jupyter notebooks located in ```scripts/*.ipynb```
+
+
+# Reference
+
+If you use code or the benchmarks of this repository then please cite our paper:
+
+```bib
+@inproceedings{eleet,
+  title={ELEET: Efficient Learned query Execution over Text and Tables},
+  author = {Matthias Urban and Carsten Binnig},
+  journal={Proceedings of the VLDB Endowment},
+  volume={17},
+  number={13},
+  pages={4867--4880},
+  year={2024},
+  publisher={VLDB Endowment}
+}
+
+```

@@ -1,0 +1,6 @@
+[submodule "TaBERT"]
+	path = TaBERT
+	url = https://github.com/DataManagementLab/TaBERT.git
+[submodule "text_to_table"]
+	path = text_to_table
+	url = git@github.com:shirley-wu/text_to_table.git
