@@ -2,6 +2,7 @@ eleet.egg-info
 .vscode
 .mypy_cache
 **/__pycache__/**
+**.pyc
 **.bz2
 **.tar.gz
 **.h5
@@ -40,3 +41,6 @@ predictions-*/**/runtimes_*.csv
 predictions-*/**/stats_*.csv
 training_output
 training_output_extractive
+eleet_pretrain/datasets/TREx
+eleet_pretrain/datasets/Wikidata
+eleet_pretrain/datasets/.output

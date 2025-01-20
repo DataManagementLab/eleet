@@ -20,7 +20,12 @@ This is the implementation described in
 1. `git clone git@github.com:DataManagementLab/eleet.git`
 1. `cd eleet`
 1. `git submodule update --init`
-1. Use Python version 3.8 (e.g., by using conda): `conda create -n eleet` then `conda install python=3.8 pip`
+1. `conda env create -f environment.yml`
+1. `conda activate eleet`
+
+<details>
+  <summary>Alternatively: Manual Environment Setup</summary>
+1. Use Python version 3.8 (e.g., by using conda: `conda create -n eleet`, `conda activate eleet` then `conda install python=3.8 pip`)
 1. Install PyTorch https://pytorch.org/get-started/locally/
 1. Install torch-scatter: https://github.com/rusty1s/pytorch_scatter
 
@@ -44,27 +49,44 @@ This is the implementation described in
     1. Install FastBPE: ```conda install -c conda-forge fastbpe```
     1. Install curl: ```conda install curl```
 1. Install other requirements: ```pip install -r requirements.txt```
+</details>
+
 1. Install: ```pip install -e .```
 1. Install TaBERT: ```cd TaBERT/ && pip install -e . && cd ..```
 1. Download English Language for spacy: ```python -m spacy download en_core_web_sm```
+1. Download Pre-trained [ELEET model](https://drive.google.com/file/d/1JIvXC0ajRZRCENMlLD3En7SGoodjP6O3/view?usp=sharing) and unzip it to a destination of choice.
+
+<details>
+  <summary>Alternatively: Generate Pre-Training Dataset, Evaluation Datasets and Pre-Train Model.</summary>
+```
 
 # Pre-training
 
+## Generate Pre-Training Dataset:
 1. Run MongoDB and set environment variables (MONGO_USER, MONGO_PASSWORD, MONGO_HOST, MONGO_PORT, MONGO_DB)
     https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
 1. Start data pre-processing: python scripts/load_data.py trex-wikidata
     --> preprocessed data will appear in datasets/preprocessed_data/preprocessed_trex-wikidata*
-1. Use slurm/pretrain.slurm for pre-training (Adjust path in file first).
+
+## Alternatively: Download Pre-Training Dataset:
+    Download and unzip Pre-Training Dataset [[here]](TODO).
+
+## Pre-Train Model:
+1. Use slurm/pretrain.slurm for pre-training (Adjust path in file first to point to pre-training dataset).
     --> Will store pretrained model in models/pretrained
+
+## Generate datasets for fine-tuning and evaluation.
+1. Generate TREx Dataset: ```python eleet/datasets/trex/generate.py```
+1. Generate Rotowire Dataset: ```python eleet/datasets/rotowire/generate.py```
+
+</details>
 
 # Finetuning + Evaluation
 
-15. Generate TREx Dataset: ```python eleet/datasets/trex/generate.py```
-16. Generate Rotowire Dataset: ```python eleet/datasets/rotowire/generate.py```
-17. Run finetuning: ```sbatch slurm/rotowire/train-ours.slurm``` (Repeat for other datasets and models).
+1. Run finetuning: ```sbatch slurm/rotowire/train-ours.slurm``` (Repeat for other datasets and models).
     --> Will store finetuned model in models/rotowire/ours/finetuned
-18. Run evaluation: ```python eleet/benchmark.py --slurm-mode --use-test-set```
-19. Visualize results using Jupyter notebooks located in ```scripts/*.ipynb```
+1. Run evaluation: ```python eleet/benchmark.py --slurm-mode --use-test-set```
+1. Visualize results using Jupyter notebooks located in ```scripts/*.ipynb```
 
 
 # Reference
