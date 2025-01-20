@@ -58,7 +58,6 @@ This is the implementation described in
 
 <details>
   <summary>Alternatively: Generate Pre-Training Dataset, Evaluation Datasets and Pre-Train Model.</summary>
-```
 
 # Pre-training
 
